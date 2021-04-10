@@ -50,3 +50,4 @@ function clickAddNamber(){
     return add.innerHTML = (capituras + capituras2)
 }
 
+

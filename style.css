@@ -18,14 +18,11 @@ h3 {
     font-size: 150px;
 }
 input {
+    background-color: #ffffff;
+}
+input:hover{
     background-color: #dddddd;
 }
 select {
-    background-color: #dddddd;
-}
-input:active {
-    background-color: #ffffff;
-}
-select:hover {
     background-color: #ffffff;
 }
