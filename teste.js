@@ -47,6 +47,6 @@ function clickAddNamber(){
     let ref = document.querySelector('#addSaida')
     let add = document.createElement('h3')
     ref.appendChild(add)
-    return add.innerHTML = parseInt(capituras + capituras2)
+    return add.innerHTML = (capituras + capituras2)
 }
 
