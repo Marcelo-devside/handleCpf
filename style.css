@@ -1,0 +1,31 @@
+@charset "UTF-8";
+body {
+background-color: #dfd9d9; 
+align-items: center;
+}
+h1 {
+    font-size: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 150px;
+    text-align: center;
+}
+div {
+    width: 800px; 
+    margin: auto;
+    margin-top:50px ;
+}
+h3 {
+    font-size: 150px;
+}
+input {
+    background-color: #dddddd;
+}
+select {
+    background-color: #dddddd;
+}
+input:active {
+    background-color: #ffffff;
+}
+select:hover {
+    background-color: #ffffff;
+}

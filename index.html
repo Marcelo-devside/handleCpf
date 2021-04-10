@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Web for CPF</title>
+    <script src="teste.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style></style>
+</head>
+<body>
+    <h1>Aplicação Web que adivinha os 3 últimos números de seu CPF</h1>
+        <div>
+            <fieldset id = estado>
+                <legend>
+                    <h4>Adicione o Estado que foi emitido o seu CPF</h4>
+                </legend>
+                <p><label for="cEst">Estado:</label>
+                    <select name="tEst" id="cEst" >
+                        <optgroup label="Região Sul">
+                            <option value="0">Rio Grande do Sul - RS</option>
+                            <option value="9">Paraná - PR</option>
+                            <option value="9">Santa Catarina - SC</option>
+                        </optgroup>
+                        <optgroup label="Região Suldeste">
+                            <option value="8">São Paulo - SP</option>
+                            <option selected value="7">Rio de Janeiro - RJ</option>
+                            <option value="7">Espirito Santo - ES</option>
+                            <option value="6">Minas Gerais - MG</option>
+                        </optgroup>
+                        <optgroup label="Região Nordeste">
+                            <option value="5">Bahia - BA</option>
+                            <option value="5">Sergipe - SE</option>
+                            <option value="4">Alagoas - AL</option>
+                            <option value="4">Paraíba - PB</option>
+                            <option value="4">Pernambuco - PE</option>
+                            <option value="4">Rio Grande do Norte - RN</option>
+                            <option value="3">Ceará - CE</option>
+                            <option value="3">Maranhão - MA</option>
+                            <option value="3">Piauí - PI</option>
+                        </optgroup>
+                        <optgroup label="Região Norte">
+                            <option value="2">Acre - AC</option>
+                            <option value="2">Amazonas - AM</option>
+                            <option value="2">Amapá - AP</option>
+                            <option value="2">Pará - PA</option>
+                            <option value="2">Rondônia - RO</option>
+                            <option value="2">Roraima - RR</option>
+                            <option value="1">Tocantins - TO</option>
+                        </optgroup>
+                        <optgroup label="Região Centro-Oeste">
+                            <option value="1">Distrito Federal - DF</option>
+                            <option value="1">Goias - GO</option>
+                            <option value="1">Mato Grosso do Sul - MS</option>
+                            <option value="1">Mato Grosso - MT</option>
+                        </optgroup>
+                    </select>
+                </p>
+            </fieldset>
+        </div>
+        <div>
+         <fieldset id = cpf>
+            <legend>
+                <h4>Digite os 8 primeiros Números do seu CPF</h4>
+            </legend>
+                <input type="number" id="oito_Numeros" name="n_numeros" size ="6" maxlength="8" placeholder="Digite">
+                <button onclick="clickAddNamber()">Calcular CPF</button>
+            </fieldset>
+        </div>
+        <div id = "addSaida">
+            <h2>Seu CPF é: </h2>
+        </div>
+</body>
+</html>
