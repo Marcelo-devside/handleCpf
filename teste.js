@@ -42,16 +42,7 @@ function clickAddNamber(){
     let capitura = document.querySelector('#oito_Numeros')
     let capituras = capitura.value
     let capitura2 = document.querySelector('#cEst')
-    let capituras2 = capitura2.value
-    let ref = document.querySelector('#addSaida')
-    let add = document.createElement('h3')                                       
-    ref.appendChild(add)
-    return add.innerHTML = (capituras + capituras2)
+    let capituras2 = capituras + capitura2.value 
+    let ref = document.querySelector('#res')
+    return ref.innerHTML = capituras2
 }
-
-typeof clickAddNamber();
-a = [10, 9, 8, 7, 6, 5, 4, 3, 2]
-a.map (function separed(add){
-s = a.unshift(clickAddNamber())
-})
-console.log(a)
