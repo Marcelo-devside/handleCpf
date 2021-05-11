@@ -12,12 +12,12 @@
 <body>
     <h1>Aplicação Web que adivinha os 3 últimos números de seu CPF</h1>
         <div>
-            <fieldset id = estado>
+            <fieldset>
                 <legend>
                     <h4>Adicione o Estado que foi emitido o seu CPF</h4>
                 </legend>
                 <p><label for="cEst">Estado:</label>
-                    <select name="tEst" id="cEst" >
+                    <select name="tEst" class="cEst" >
                         <optgroup label="Região Sul">
                             <option value="0">Rio Grande do Sul - RS</option>
                             <option value="9">Paraná - PR</option>
@@ -60,18 +60,18 @@
             </fieldset>
         </div>
         <div>
-         <fieldset id = cpf>
+         <fieldset class= cpf>
             <legend>
                 <h4>Digite os 8 primeiros Números do seu CPF</h4>
             </legend>
-                <input type="text" id="oito_Numeros" name="n_numeros" size ="6" maxlength="8" placeholder="Digite">
-                 <input type="button"onclick="clickAddNamber()" value="Calcular CPF ">
+                <input type="text" class="oito_Numeros" id ="oito_Numeros2" name="n_numeros" size ="6" maxlength="8" placeholder="Digite">
+                 <input class = "estado" type="button"onclick="clickAddNamber()" value="Calcular CPF ">
                 <input type="button" value="Nova persquisa" onClick="window.location.reload()">
             </fieldset>
         </div>
         <div id = "addSaida">
             <h2>Seu CPF é: </h2>
-            <h3 id = "res" ></h3>
+            <h3 class= "res" ></h3>
         </div>
 </body>
 </html>

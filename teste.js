@@ -37,12 +37,28 @@
 //     let capitura = document.querySelector("#localname")
 //     console.log(capitura.value)
 // }
+// function tcPress(event){
+//     console.log(event)
+//     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+//     if ( event.key in numbers ){
+//         console.log(event.key)
+//         }else {
+//             alert("Digite apenas Números")
+//             window.location.reload()
+//             }
+        
+// }
+// window.addEventListener("keydown", tcPress)
 
 function clickAddNamber(){
-    let capitura = document.querySelector('#oito_Numeros')
+    let capitura = document.querySelector('.oito_Numeros')
     let capituras = capitura.value
-    let capitura2 = document.querySelector('#cEst')
+    let capitura2 = document.querySelector('.cEst')
     let capituras2 = capituras + capitura2.value 
-    let ref = document.querySelector('#res')
-    return ref.innerHTML = capituras2
+    let ref =document.querySelector('.res')
+    ref.innerText = capituras2
+    Array.from(document.querySelectorAll('.res')).map(function(elemento, indece, arrayBase){
+        console.log(elemento.textContent *2)
+    })
 }
+
