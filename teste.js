@@ -58,7 +58,7 @@ function clickAddNamber(){
     let ref =document.querySelector('.res')
     ref.innerText = capituras2
     Array.from(document.querySelectorAll('.res')).map(function(elemento, indece, arrayBase){
-        console.log(elemento.textContent *2)
+        console.log(elemento.textContent)
     })
 }
 
