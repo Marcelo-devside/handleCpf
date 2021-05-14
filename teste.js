@@ -58,7 +58,8 @@ function clickAddNamber(){
     let ref =document.querySelector('.res')
     ref.innerText = capituras2
     Array.from(document.querySelectorAll('.res')).map(function(elemento, indece, arrayBase){
-        console.log(elemento.textContent)
+        const multDigito = [10, 9, 8, 7, 6, 5, 4, 3, 2]
+        console.log(typeof(parseInt(elemento.textContent)))
     })
 }
 
