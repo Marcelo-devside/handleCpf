@@ -57,5 +57,7 @@ function clickAddNamber(){
     let capituras2 = capituras + capitura2.value
     let ref =document.querySelector('.res')
     ref.innerText = capituras2
-    return console.log(Array.from(capituras2))
+    let numArray= Array.from(capituras2)
+    const novoArray = numArray.map(numero => parseInt(numero))
+    return console.log(novoArray)
     }
