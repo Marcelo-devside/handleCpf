@@ -37,29 +37,25 @@
 //     let capitura = document.querySelector("#localname")
 //     console.log(capitura.value)
 // }
-// function tcPress(event){
-//     console.log(event)
-//     let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-//     if ( event.key in numbers ){
-//         console.log(event.key)
-//         }else {
-//             alert("Digite apenas Números")
-//             window.location.reload()
-//             }
-        
-// }
-// window.addEventListener("keydown", tcPress)
+function tcPress(event){
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+    const novoArray = []
+    if ( event.key in numbers ){
+    }
+    else {
+        alert("Digite apenas Números")
+        window.location.reload()
+    }
+}
+
+window.addEventListener("keypress", tcPress)
 
 function clickAddNamber(){
     let capitura = document.querySelector('.oito_Numeros')
-    let capituras = capitura.value
+    let capituras = capitura.value;
     let capitura2 = document.querySelector('.cEst')
-    let capituras2 = capituras + capitura2.value 
+    let capituras2 = capituras + capitura2.value
     let ref =document.querySelector('.res')
     ref.innerText = capituras2
-    Array.from(document.querySelectorAll('.res')).map(function(elemento, indece, arrayBase){
-        const multDigito = [10, 9, 8, 7, 6, 5, 4, 3, 2]
-        console.log(typeof(parseInt(elemento.textContent)))
-    })
-}
-
+    return console.log(Array.from(capituras2))
+    }
