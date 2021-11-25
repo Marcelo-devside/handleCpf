@@ -1,28 +1,116 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap");
+
+* {
+    font-family: "Roboto", sans-serif;
+}
 body {
-background-color: #dfd9d9; 
-align-items: center;
+    background-color: #212529;
+    align-items: center;
 }
 h1 {
-    font-size: 40px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 150px;
+    font-size: 50px;
+    margin-top: 30px;
     text-align: center;
+    font-weight: 400;
+    font-family: "Bangers", cursive;
+    letter-spacing: 0.1em;
+    color: #5b6268;
 }
 div {
-    width: 800px; 
+    width: 800px;
     margin: auto;
-    margin-top:50px ;
+    margin-top: 50px;
 }
 h3 {
-    font-size: 150px;
+    position: absolute;
+    font-size: 27px;
+    margin-top: 352px;
+    margin-left: 243px;
+    margin-bottom: 0;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.671);
+    letter-spacing: 4.5px;
+    font-family: "Bebas Neue", cursive;
 }
-input {
+#oito_Numeros2 {
+    height: 2em;
+    width: 11em;
+    margin-right: 2em;
+    border-radius: 5px;
+    white-space: 30em;
+    border-color: rgb(122, 120, 120);
+    background-color: #ffffff;
+    border-style: double;
+    font-weight: 700;
+    letter-spacing: 0.5em;
+    font-size: 14px;
+    text-align: center;
+}
+#oito_Numeros2::placeholder {
+    text-align: center;
+    color: rgb(202, 190, 190);
+    letter-spacing: 0.1em;
+    font-size: 13px;
+}
+#oito_Numeros2:focus {
+    border-color: rgb(116, 28, 28);
+}
+#oito_Numeros2:focus::placeholder {
+    color: #ffffff;
+}
+.cEst {
+    height: 2.5em;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.719);
+    background-color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+.estado {
+    height: 2.8em;
+    width: 9em;
+    border-radius: 15px;
+    border-color: rgb(187, 183, 183);
+    font-weight: 600;
+    background-color: #ffffff;
+    border-style: double;
+    margin-bottom: 1.1em;
+    margin-top: 1.5em;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+    color: rgba(0, 0, 0, 0.719);
+}
+.estado:hover {
+    /* background-color: #dddddd; */
+    border-color: rgb(116, 28, 28);
+    color: rgb(128, 33, 33);
     background-color: #ffffff;
 }
-input:hover{
-    background-color: #dddddd;
+/* .estado:focus {
+background-color: rgb(250, 178, 178);
+border-color: rgb(116, 28, 28);
+color: rgb(128, 33, 33);
+} */
+#BtnPesquisa {
+    transition: 0.1s;
+    visibility: hidden;
+    margin-left: -124px;
 }
-select {
-    background-color: #ffffff;
+fieldset {
+    border-radius: 10px;
+    color: #ced4da;
+}
+h4 {
+    font-weight: 300;
+    color: #ced4da;
+}
+img {
+    position: absolute;
+    margin-left: 23px;
+    height: 570px;
+    width: 750px;
 }
