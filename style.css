@@ -2,37 +2,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 * {
     font-family: "Roboto", sans-serif;
 }
 body {
-    background-color: #212529;
+    display:flex;
+    flex-direction: column;
+    background-color: #abd5ffb4;
     align-items: center;
 }
 h1 {
-    font-size: 50px;
+    font-size: 2.5vw;
     margin-top: 30px;
     text-align: center;
     font-weight: 400;
-    font-family: "Bangers", cursive;
+    font-family: 'Anton', sans-serif;
     letter-spacing: 0.1em;
-    color: #5b6268;
+    color: #3570a3;
 }
 div {
-    width: 800px;
+    width: 60vw;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 h3 {
     position: absolute;
     font-size: 27px;
-    margin-top: 352px;
-    margin-left: 243px;
+    margin-top: 350px;
+    margin-left: -92px;
     margin-bottom: 0;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.671);
-    letter-spacing: 4.5px;
+    letter-spacing: 2.5px;
     font-family: "Bebas Neue", cursive;
 }
 #oito_Numeros2 {
@@ -68,12 +71,13 @@ h3 {
     background-color: #ffffff;
     font-weight: 800;
     cursor: pointer;
+    border-color: rgb(122, 120, 120);
 }
 .estado {
     height: 2.8em;
     width: 9em;
     border-radius: 15px;
-    border-color: rgb(187, 183, 183);
+    border-color: rgb(122, 120, 120);
     font-weight: 600;
     background-color: #ffffff;
     border-style: double;
@@ -83,18 +87,13 @@ h3 {
     cursor: pointer;
     transition: 0.2s;
     color: rgba(0, 0, 0, 0.719);
+    
 }
 .estado:hover {
-    /* background-color: #dddddd; */
-    border-color: rgb(116, 28, 28);
-    color: rgb(128, 33, 33);
+    border-color: #0d4474;
+    color: #094479;
     background-color: #ffffff;
 }
-/* .estado:focus {
-background-color: rgb(250, 178, 178);
-border-color: rgb(116, 28, 28);
-color: rgb(128, 33, 33);
-} */
 #BtnPesquisa {
     transition: 0.1s;
     visibility: hidden;
@@ -105,12 +104,79 @@ fieldset {
     color: #ced4da;
 }
 h4 {
-    font-weight: 300;
-    color: #ced4da;
+    font-weight: 00;
+    color: #0f4e85;
+}
+label{
+    color: #0f4e85;
+    font-weight: 600;
+}
+#addSaida {
+    display: flex;
+    justify-content: center;
+    width: 30vw;
 }
 img {
     position: absolute;
-    margin-left: 23px;
-    height: 570px;
-    width: 750px;
+    /* margin-left: 23px; */
+    /* height: 570px;
+    width: 750px; */
+    height: 35.5em;
+    width: 40em;
+}
+.popup-wrapper{
+    display: none;
+    background: rgba(255,255,255, .1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    animation: fadeOut 0.2s;
+}
+.popup{
+    font-family: arial;
+    text-align: center;
+    width: 100%;
+    max-width: 25.7em;
+    margin: 350px auto;
+    padding-bottom: 50px;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+}
+@keyframes fadeOut {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.popup-close{
+    display:flex;
+    justify-content: flex-end;
+    top: 50px;
+    cursor: pointer;
+    font-weight: 800;
+    padding: 10px;
+    color: #000;
+}
+.popup-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 200px;
+    margin: 5px auto;
+    padding: 5px;
+    position: relative;
+}
+#subtitulo{
+    color: crimson;
+    font-size: 2em;
+}
+#paragrafo{
+    font-weight: 600;
+    font-size: 1.1em;
 }
