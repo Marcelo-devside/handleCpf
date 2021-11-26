@@ -14,7 +14,7 @@ body {
     align-items: center;
 }
 h1 {
-    font-size: 2.5vw;
+    font-size: 2.7vw;
     margin-top: 30px;
     text-align: center;
     font-weight: 400;
@@ -37,6 +37,9 @@ h3 {
     color: rgba(255, 255, 255, 0.671);
     letter-spacing: 2.5px;
     font-family: "Bebas Neue", cursive;
+}
+.fieldSetGrup{
+    margin-top: -15px;
 }
 #oito_Numeros2 {
     height: 2em;
@@ -104,7 +107,7 @@ fieldset {
     color: #ced4da;
 }
 h4 {
-    font-weight: 00;
+    font-weight: 800;
     color: #0f4e85;
 }
 label{
@@ -118,9 +121,6 @@ label{
 }
 img {
     position: absolute;
-    /* margin-left: 23px; */
-    /* height: 570px;
-    width: 750px; */
     height: 35.5em;
     width: 40em;
 }
@@ -140,7 +140,7 @@ img {
     text-align: center;
     width: 100%;
     max-width: 25.7em;
-    margin: 350px auto;
+    margin: 25vh auto;
     padding-bottom: 50px;
     background: #fff;
     position: relative;
@@ -179,4 +179,124 @@ img {
 #paragrafo{
     font-weight: 600;
     font-size: 1.1em;
+}
+/* reponsividade */
+@media screen and (max-width: 1350px) {
+    h1{
+        font-size: 3.1vw;
+    }
+    div {
+        width: 75vw;
+    }
+    .fieldSetGrup{
+        margin-top: -10px;
+    }
+}
+@media screen and (max-width: 1234px) {
+    h1{
+        font-size: 3.2vw;
+    }
+    div {
+        width: 75vw;
+    }
+    .fieldSetGrup{
+        margin-top: -27px;
+    }
+}
+@media screen and (max-width: 1090px) {
+    h1{
+        font-size: 3.2vw;
+    }
+    div {
+        width: 80vw;
+    }
+    .fieldSetGrup{
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 800px) {
+    h1{
+        font-size: 3.7vw;
+    }
+    div {
+        width: 90vw;
+    }
+    #addSaida{
+        width: 80vw;
+    }
+    .fieldSetGrup{
+        margin-top: -15px;
+    }
+}
+@media screen and (max-width: 685px) {
+    h1{
+        font-size: 4.9vw;
+    }
+    div {
+        width: 90vw;
+    }
+    #addSaida{
+        width: 80vw;
+    }
+    img{
+        height: 30.5em;
+    width: 30em;
+    }
+    h3{
+        font-size: 18px;
+        margin-top: 304px;
+        margin-left: -69px;
+    }
+}
+@media screen and (max-width: 535px) {
+    h1{
+        font-size: 5.9vw;
+    }
+    div {
+        width: 90vw;
+    }
+    #addSaida{
+        width: 10vw;
+    }
+    img{
+        height: 25.5em;
+    width: 25em;
+    }
+    h3{
+        font-size: 14px;
+        margin-top: 255px;
+        margin-left: -58px;
+    }
+    .popup{
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 401px) {
+    img{
+        height: 20.5em;
+    width: 20em;
+    }
+    h3{
+        font-size: 10px;
+        margin-top: 205px;
+        margin-left: -45px;
+    }
+}
+@media screen and (max-width: 397px) {
+    .classh4{
+        font-size: 12.6px;
+    }
+    .cEst{
+        width: 175px;
+    }
+    label.classLabel{
+        width: 10px;
+    }
+    #oito_Numeros2{
+        width: 115px;
+    }
+    .estado{
+        width: 101px;
+        margin-right: -6px ;
+    }
 }

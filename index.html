@@ -17,13 +17,14 @@
         <h1 class="sorte">
             Aplicação Web que adivinha os 3 últimos números de seu CPF
         </h1>
+    <div class="fieldSetGrup">    
         <div>
             <fieldset>
                 <legend>
-                    <h4>Selecione o Estado emissor do CPF</h4>
+                    <h4 class="classh4">Selecione o Estado emissor do CPF</h4>
                 </legend>
-                <p>
-                    <label for="cEst">Estado:</label>
+                <p>t
+                    <label class="classLabel" for="cEst">Estado:</label>
                     <select name="tEst" class="cEst" onfocus="focus">
                         <optgroup label="Região Sul">
                             <option value="0">Rio Grande do Sul - RS</option>
@@ -71,7 +72,7 @@
         <div>
             <fieldset class="cpf">
                 <legend>
-                    <h4>Digite os 8 (oito) primeiros números do CPF</h4>
+                    <h4 class="classh4">Digite os 8 (oito) primeiros números do CPF</h4>
                 </legend>
                 <input
                     type="text"
@@ -99,11 +100,11 @@
                 />
             </fieldset>
         </div>
+    </div>    
         <div id="addSaida">
             <img src="img/imgCPF3.png" alt="cartão CPF" />
             <h3 class="res">000.000.000-00</h3>
         </div>
-        <!-- <button id="btnPopup">Clique aqui</button> -->
     <container class="popup-wrapper">
         <div class="popup">
             <label class="popup-close">X</label>
