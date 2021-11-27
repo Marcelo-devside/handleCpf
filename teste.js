@@ -20,7 +20,7 @@ const operationDisable = () =>{
 function Init() {
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
-    document.querySelector(".cEst").focus();
+    // document.querySelector(".cEst").focus();
     areaInputMask()
 }
 window.addEventListener("load", Init);
@@ -47,21 +47,21 @@ function checkInput(e) {
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
     const btnSearhGerador = document.querySelector("#maker");
-    btnSearhGerador.style.visibility = option1;
-    btnSearhSelect.style.visibility = option2;
+    btnSearhGerador.style.display = option1;
+    btnSearhSelect.style.display = option2;
 }
 function validationOfSize() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
         Init()
-        btnSearh("visible", "hidden");
+        btnSearh("initial", "none");
         popupWrapper.style.display = 'block'
         paragrafo.textContent ="Você não digitou os oito números!";
         return numberExit.preventDefault()
     }
 }
 function clickAddNamber() {
-    btnSearh("hidden", "visible");
+    btnSearh("none", "initial");
     validationOfSize();
     const typingNamber = document.querySelector(".oito_Numeros").value;
     const typingEstate = document.querySelector(".cEst").value;
@@ -97,7 +97,7 @@ function clickAddNamber() {
 }
 
 function areaInput() {
-    btnSearh("visible", "hidden");
+    btnSearh("initial", "none");
     const araseInput = document.querySelector("#oito_Numeros2");
     const defaultEst = document.querySelector(".cEst");
     araseInput.value= null;

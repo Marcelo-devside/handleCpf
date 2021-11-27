@@ -14,17 +14,18 @@
         <style></style>
     </head>
     <body>
-        <h1 class="sorte">
-            Aplicação Web que adivinha os 3 últimos números de seu CPF
-        </h1>
+        <div id="bgTitle">
+            <h1 class="sorte">
+                Aplicação que completa os 3 últimos números de seu CPF
+            </h1>
+        </div>
     <div class="fieldSetGrup">    
         <div>
-            <fieldset>
-                <legend>
+            <div class="fildEst">
                     <h4 class="classh4">Selecione o Estado emissor do CPF</h4>
-                </legend>
-                <p>t
-                    <label class="classLabel" for="cEst">Estado:</label>
+                
+                <p>
+                    <!-- <label class="classLabel" for="cEst">Estado:</label> -->
                     <select name="tEst" class="cEst" onfocus="focus">
                         <optgroup label="Região Sul">
                             <option value="0">Rio Grande do Sul - RS</option>
@@ -67,42 +68,46 @@
                         </optgroup>
                     </select>
                 </p>
-            </fieldset>
+            </div>
+            <hr>
         </div>
         <div>
-            <fieldset class="cpf">
-                <legend>
+            <div class="cpf">
+            
                     <h4 class="classh4">Digite os 8 (oito) primeiros números do CPF</h4>
-                </legend>
-                <input
-                    type="text"
-                    class="oito_Numeros oitoNumeros3"
-                    id="oito_Numeros2"
-                    name="n_numeros"
-                    size="6"
-                    minlength="8"
-                    maxlength="8"
-                    placeholder="Digite o número"
-                />
-                <input
-                    class="estado"
-                    type="button"
-                    id="maker"
-                    onclick="clickAddNamber()"
-                    value="Gerar CPF "
-                />
-                <input
-                    class="estado"
-                    type="button"
-                    id="BtnPesquisa"
-                    onclick="areaInput()"
-                    value="Nova Consulta"
-                />
-            </fieldset>
+                <div class="getInput">
+                    
+                    <input
+                        type="text"
+                        class="oito_Numeros oitoNumeros3"
+                        id="oito_Numeros2"
+                        name="n_numeros"
+                        size="6"
+                        minlength="8"
+                        maxlength="8"
+                        placeholder="Digite o número"
+                    />
+                    <input
+                        class="estado"
+                        type="button"
+                        id="maker"
+                        onclick="clickAddNamber()"
+                        value=" Completar CPF "
+                    />
+                    <input
+                        class="estado"
+                        type="button"
+                        id="BtnPesquisa"
+                        onclick="areaInput()"
+                        value="Nova Consulta"
+                    />
+                    
+                </div>
+            </div>
         </div>
     </div>    
         <div id="addSaida">
-            <img src="img/imgCPF3.png" alt="cartão CPF" />
+            <img id="image2"src="img/img2.png" alt="cartão CPF" />
             <h3 class="res">000.000.000-00</h3>
         </div>
     <container class="popup-wrapper">

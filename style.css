@@ -10,41 +10,54 @@
 body {
     display:flex;
     flex-direction: column;
-    background-color: #abd5ffb4;
+    background-color: #00032f;
     align-items: center;
+    overflow-x: hidden;
+}
+#image1{
+    visibility: hidden;
+}
+#image2{
+    margin-top: 80px;
+}
+#bgTitle{
+    margin-top: 13px;
+    margin-bottom: 80px;
+    background-color: #e5058c;
+    width: 110%;
 }
 h1 {
-    font-size: 2.7vw;
-    margin-top: 30px;
+    font-size: 3.3vw;
+    margin: 0px ;
     text-align: center;
     font-weight: 400;
+    padding: 10px;
     font-family: 'Anton', sans-serif;
     letter-spacing: 0.1em;
-    color: #3570a3;
-}
-div {
-    width: 60vw;
-    margin: auto;
-    margin-top: 35px;
+    color: #fff;
 }
 h3 {
     position: absolute;
-    font-size: 27px;
-    margin-top: 350px;
-    margin-left: -92px;
+    font-size: 37px;
+    margin-top: 260px;
+    margin-left: -235px;
     margin-bottom: 0;
     font-weight: 900;
-    color: rgba(255, 255, 255, 0.671);
+    color: rgba(255, 255, 255, 0.555);
     letter-spacing: 2.5px;
     font-family: "Bebas Neue", cursive;
 }
 .fieldSetGrup{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
     margin-top: -15px;
 }
 #oito_Numeros2 {
-    height: 2em;
+    position: relative;
+    height: 2.5em;
     width: 11em;
-    margin-right: 2em;
+    margin-right: 4em;
     border-radius: 5px;
     white-space: 30em;
     border-color: rgb(122, 120, 120);
@@ -52,14 +65,14 @@ h3 {
     border-style: double;
     font-weight: 700;
     letter-spacing: 0.5em;
-    font-size: 14px;
+    font-size: 1.1em;
     text-align: center;
 }
 #oito_Numeros2::placeholder {
     text-align: center;
     color: rgb(202, 190, 190);
     letter-spacing: 0.1em;
-    font-size: 13px;
+    font-size: 15px;
 }
 #oito_Numeros2:focus {
     border-color: rgb(116, 28, 28);
@@ -67,8 +80,30 @@ h3 {
 #oito_Numeros2:focus::placeholder {
     color: #ffffff;
 }
+.fildEst{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.cpf{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 0;
+}
+.getInput{
+    display: flex;
+    justify-content: center;
+    margin-top:40px;
+    /* width: 120%; */
+}
 .cEst {
-    height: 2.5em;
+    height: 3em;
+    width: 17em;
+    font-size: 1em;
+    text-align: center;
     border-radius: 5px;
     color: rgba(0, 0, 0, 0.719);
     background-color: #ffffff;
@@ -77,41 +112,47 @@ h3 {
     border-color: rgb(122, 120, 120);
 }
 .estado {
-    height: 2.8em;
-    width: 9em;
-    border-radius: 15px;
-    border-color: rgb(122, 120, 120);
+    height: 3em;
+    width: 11em;
+    border-radius: 10px;
+    /* border-color: rgb(122, 120, 120); */
+    /* border-color: #e5058c; */
+    border-color: #1525ff;
     font-weight: 600;
-    background-color: #ffffff;
-    border-style: double;
-    margin-bottom: 1.1em;
-    margin-top: 1.5em;
+    background-color: #000550;
     outline: none;
     cursor: pointer;
-    transition: 0.2s;
-    color: rgba(0, 0, 0, 0.719);
-    
+    transition: 0.1s;
+    color: #fff;
+    font-size: 1em;
 }
 .estado:hover {
-    border-color: #0d4474;
-    color: #094479;
-    background-color: #ffffff;
+    /* border-color: #0d4474; */
+    color: #fff;
+    background-color: #e5058c;
+}
+#maker{
+    position: relative;
 }
 #BtnPesquisa {
-    transition: 0.1s;
-    visibility: hidden;
-    margin-left: -124px;
+    display: none;
+    transition: 0.1s; 
 }
 fieldset {
     border-radius: 10px;
     color: #ced4da;
 }
+hr{
+    margin: 30px auto 15px auto;
+}
 h4 {
+    font-size: 2em;
+    margin-top: 15px;
     font-weight: 800;
-    color: #0f4e85;
+    color: #fff;
 }
 label{
-    color: #0f4e85;
+    color: #fff;
     font-weight: 600;
 }
 #addSaida {
@@ -119,10 +160,12 @@ label{
     justify-content: center;
     width: 30vw;
 }
-img {
+#image2 {
     position: absolute;
-    height: 35.5em;
-    width: 40em;
+    /* height: 25.5em;
+    width: 35em; */
+    height: 21.5em;
+    width: 45vh;
 }
 .popup-wrapper{
     display: none;
@@ -180,123 +223,188 @@ img {
     font-weight: 600;
     font-size: 1.1em;
 }
-/* reponsividade */
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1070px)  {
     h1{
-        font-size: 3.1vw;
-    }
-    div {
-        width: 75vw;
-    }
-    .fieldSetGrup{
-        margin-top: -10px;
-    }
-}
-@media screen and (max-width: 1234px) {
-    h1{
-        font-size: 3.2vw;
-    }
-    div {
-        width: 75vw;
-    }
-    .fieldSetGrup{
-        margin-top: -27px;
-    }
-}
-@media screen and (max-width: 1090px) {
-    h1{
-        font-size: 3.2vw;
-    }
-    div {
-        width: 80vw;
-    }
-    .fieldSetGrup{
-        margin-top: 5px;
+        font-size: 4vw;
     }
 }
 @media screen and (max-width: 800px) {
     h1{
-        font-size: 3.7vw;
+        font-size: 4.7vw;
     }
-    div {
-        width: 90vw;
-    }
-    #addSaida{
-        width: 80vw;
-    }
-    .fieldSetGrup{
-        margin-top: -15px;
+}
+@media screen and (max-width: 768px) {
+    h3{
+        font-size: 34px;
+        margin-top: 260px;
+        margin-left: -215px;
     }
 }
 @media screen and (max-width: 685px) {
     h1{
         font-size: 4.9vw;
     }
-    div {
-        width: 90vw;
-    }
-    #addSaida{
-        width: 80vw;
-    }
-    img{
-        height: 30.5em;
-    width: 30em;
-    }
+}
+@media screen and (max-width: 768px) {
     h3{
-        font-size: 18px;
-        margin-top: 304px;
-        margin-left: -69px;
+        font-size: 32px;
+        margin-top: 260px;
+        margin-left: -255px;
     }
 }
-@media screen and (max-width: 535px) {
+@media screen and (max-width: 650px) {
+    .popup-wrapper{
+        background: rgba(0,0,0, .5);
+    }
     h1{
         font-size: 5.9vw;
     }
-    div {
-        width: 90vw;
-    }
-    #addSaida{
-        width: 10vw;
-    }
-    img{
-        height: 25.5em;
-    width: 25em;
+    #image2{
+        height: 21.5em;
+        width: 28em;
     }
     h3{
-        font-size: 14px;
-        margin-top: 255px;
-        margin-left: -58px;
+        font-size: 32px;
+        margin-top: 260px;
+        margin-left: -215px;
     }
     .popup{
         width: 70vw;
     }
+    .classh4{
+        font-size: 4.8vw;
+    }
 }
-@media screen and (max-width: 401px) {
-    img{
-        height: 20.5em;
-    width: 20em;
+@media screen and (max-width: 630px) {
+    .classh4{
+        font-size: 5.5vw;
+    }
+    h1{
+        font-size: 5.9vw;
+    }
+}
+@media screen and (max-width: 500px) and (min-width: 280px) {
+    body{
+        overflow-y: auto;
+    }
+    .popup-wrapper{
+        background-color: rgba(0, 0, 0, .7) ;
+        backdrop-filter: none;
+    }
+    #image2{
+        height: 80vw;
+        width: 100vw;
+    }
+    .getInput{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
     h3{
-        font-size: 10px;
-        margin-top: 205px;
-        margin-left: -45px;
-    }
-}
-@media screen and (max-width: 397px) {
-    .classh4{
-        font-size: 12.6px;
-    }
-    .cEst{
-        width: 175px;
-    }
-    label.classLabel{
-        width: 10px;
+        font-size: 7.1vw;
+        margin-top: 60%;
+        margin-left: -48vw;
     }
     #oito_Numeros2{
-        width: 115px;
+        margin-right: 0px;
+        margin-bottom: 60px;
+        height: 50px;
+        width: 247px;
+        font-size: 1em;
+        border-radius: 5px;
     }
     .estado{
-        width: 101px;
+        width: 247px;
+        height: 55px;
         margin-right: -6px ;
+        padding: 0px;
+        margin: 0px;
+    }
+    .cEst{
+        width: 255px;
+    }
+    .classh4{
+        font-size: 6vw;
+    }
+    h1{
+        max-width: 95%;
+        font-size: 6.9vw;
+    }
+}
+@media screen and (max-width: 470px){
+    h3{
+        font-size: 7.1vw;
+        margin-top: 61%;
+        margin-left: -48vw;
+    }
+}
+@media screen and (max-width: 440px){
+    h3{
+        font-size: 7.1vw;
+        margin-top: 63%;
+        margin-left: -48vw;
+    }
+}
+@media screen and (max-width: 414px){
+    h3{
+        font-size: 7.1vw;
+        margin-top: 64%;
+        margin-left: -48vw;
+    }
+}
+@media screen and (max-width: 395px){
+    h3{
+        font-size: 6.8vw;
+        margin-top: 66%;
+        margin-left: -48vw;
+    }
+}
+@media screen and (max-width: 375px){
+    h3{
+        font-size: 6.8vw;
+        margin-top: 66%;
+        margin-left: -47vw;
+    }
+}
+@media screen and (max-width: 365px){
+    h3{
+        font-size: 6.8vw;
+        margin-top: 67.5%;
+        margin-left: -47vw;
+    }
+}
+@media screen and (max-width: 360px){
+    h3{
+        font-size: 6.7vw;
+        margin-top: 65.5%;
+        margin-left: -47vw;
+    }
+}
+@media screen and (max-width: 340px){
+    h3{
+        font-size: 6.7vw;
+        margin-top: 66.5%;
+        margin-left: -47vw;
+    }
+}
+@media screen and (max-width: 317px){
+    h3{
+        font-size: 6.7vw;
+        margin-top: 68.5%;
+        margin-left: -47vw;
+    }
+}
+@media screen and (max-width: 292px){
+    h3{
+        font-size: 6.2vw;
+        margin-top: 69.5%;
+        margin-left: -48vw;
+    }
+}
+@media screen and (max-width: 280px){
+    h3{
+        font-size: 6.4vw;
+        margin-top: 71%;
+        margin-left: -47vw;
     }
 }
