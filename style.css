@@ -385,8 +385,10 @@ label {
         overflow-y: auto;
     }
     h3 {
-        font-size: 7vw;
-        margin-top: 63vw;
+        /* font-size: 7vw; */
+        font-size: 5.8vw;
+        /* margin-top: 63vw; */
+        margin-top: 64vw;
     }
     ::-webkit-scrollbar {
         display: none;
