@@ -253,6 +253,9 @@ label {
     }
 }
 @media screen and (max-width: 870px) {
+    .popup-wrapper {
+        background: rgba(0, 0, 0, 0.8);
+    }
     h1 {
         font-size: 2em;
     }
@@ -311,6 +314,9 @@ label {
         height: 80vw;
         width: 100vw;
     }
+    #oito_Numeros2::placeholder {
+    font-size: 20px;
+    }
     .getInput {
         display: flex;
         align-items: center;
@@ -360,7 +366,9 @@ label {
     h3 {
         font-size: 7.2vw;
         margin-top: 61vw;
-        margin-left: -47vw;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 }
 @media screen and (max-width: 375px) {
@@ -368,11 +376,17 @@ label {
         font-size: 7vw;
         margin-top: 63vw;
     }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 @media screen and (max-width: 360px) {
     h3 {
         font-size: 7vw;
         margin-top: 64vw;
+    }
+    ::-webkit-scrollbar {
+        display: none;
     }
 }
 @media screen and (max-width: 320px) {
@@ -380,14 +394,20 @@ label {
         font-size: 6.7vw;
         margin-top: 67vw;
     }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 @media screen and (max-width: 280px) {
     h3 {
         font-size: 6.3vw;
         margin-top: 71vw;
     }
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
-@media screen and (max-width: 567px) {
+/* @media screen and (max-width: 567px) {
 }
 @media screen and (min-width: 1024px) and (max-width: 1030px) and (orientation: landscape) {
 }
@@ -402,4 +422,4 @@ label {
 @media screen and (width: 720px) and (orientation: landscape) {
 }
 @media screen and (width: 653px) and (height: 280px) and (orientation: landscape) {
-}
+} */
