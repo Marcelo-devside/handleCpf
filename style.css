@@ -292,13 +292,20 @@ label {
     }
 }
 @media screen and (max-width: 550px) {
+    body {
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
     h1 {
         font-size: 6.9vw;
     }
     h3 {
         font-size: 7.5vw;
         margin-top: 56vw;
-        margin-left: -47vw;
+        margin-left: -4vw;
     }
     #image2 {
         height: 80vw;
@@ -329,8 +336,8 @@ label {
     }
     .cEst {
         width: 92%;
-        height: 5em;
-        font-size: 1em;
+        height: 3.3em;
+        font-size: 1.5em;
     }
     .classh4 {
         font-size: 6vw;
@@ -360,28 +367,24 @@ label {
     h3 {
         font-size: 7vw;
         margin-top: 63vw;
-        margin-left: -47vw;
     }
 }
 @media screen and (max-width: 360px) {
     h3 {
         font-size: 7vw;
         margin-top: 64vw;
-        margin-left: -47vw;
     }
 }
 @media screen and (max-width: 320px) {
     h3 {
         font-size: 6.7vw;
         margin-top: 67vw;
-        margin-left: -47vw;
     }
 }
 @media screen and (max-width: 280px) {
     h3 {
         font-size: 6.3vw;
         margin-top: 71vw;
-        margin-left: -47vw;
     }
 }
 @media screen and (max-width: 567px) {
