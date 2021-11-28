@@ -262,11 +262,6 @@ label {
     .classh4 {
         font-size: 1.2em;
     }
-    h3 {
-        font-size: 7.5vw;
-        margin-top: 56vw;
-        margin-left: -24vw;
-    }
 }
 @media screen and (max-width: 738px) {
     h1 {
@@ -305,21 +300,18 @@ label {
         overflow-x: hidden;
     }
     ::-webkit-scrollbar {
-        display: none;
-    }
-    ::-webkit-scrollbar-track{
-        display: none;
+        display: hidden;
     }
     h1 {
         font-size: 6.9vw;
     }
     h3 {
         font-size: 7.5vw;
-        margin-top: 56vw;
-        margin-left: -26vw;
+        margin-top: 51vw;
+        margin-left: -20vw;
     }
     #image2 {
-        height: 80vw;
+        height: 70vw;
         width: 100vw;
     }
     #oito_Numeros2::placeholder {
@@ -364,7 +356,7 @@ label {
     }
     #addSaida {
         position: absolute;
-        margin-top: 15vh;
+        margin-top: 20vh;
     }
     .fieldSetGrup {
         margin-top: 180%;
@@ -382,9 +374,6 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
-    ::-webkit-scrollbar-track{
-        display: none;
-    }
 }
 @media screen and (max-width: 375px) {
     body{
@@ -392,14 +381,11 @@ label {
     }
     h3 {
         /* font-size: 7vw; */
-        font-size: 5vw;
+        font-size: 5.8vw;
         /* margin-top: 63vw; */
-        margin-top: 64vw;
+        margin-top: 59vw;
     }
     ::-webkit-scrollbar {
-        display: none;
-    }
-    ::-webkit-scrollbar-track{
         display: none;
     }
 }
@@ -414,9 +400,6 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
-    ::-webkit-scrollbar-track{
-        display: none;
-    }
 }
 @media screen and (max-width: 320px) {
     body{
@@ -429,9 +412,6 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
-    ::-webkit-scrollbar-track{
-        display: none;
-    }
 }
 @media screen and (max-width: 280px) {
     body{
@@ -442,9 +422,6 @@ label {
         margin-top: 71vw;
     }
     ::-webkit-scrollbar {
-        display: none;
-    }
-    ::-webkit-scrollbar-track{
         display: none;
     }
 }
