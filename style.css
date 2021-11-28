@@ -262,6 +262,11 @@ label {
     .classh4 {
         font-size: 1.2em;
     }
+    h3 {
+        font-size: 7.5vw;
+        margin-top: 56vw;
+        margin-left: -24vw;
+    }
 }
 @media screen and (max-width: 738px) {
     h1 {
@@ -311,7 +316,7 @@ label {
     h3 {
         font-size: 7.5vw;
         margin-top: 56vw;
-        margin-left: -24vw;
+        margin-left: -26vw;
     }
     #image2 {
         height: 80vw;
@@ -328,6 +333,7 @@ label {
     }
     #oito_Numeros2 {
         margin-right: 0px;
+        margin-top:15px;
         margin-bottom: 60px;
         width: 90%;
         height: 3em;
@@ -341,7 +347,7 @@ label {
         margin-right: -6px;
         padding: 0px;
         margin: 0px;
-        margin-bottom: 10%;
+        margin-top: 10%;
     }
     .cEst {
         width: 92%;
@@ -386,7 +392,7 @@ label {
     }
     h3 {
         /* font-size: 7vw; */
-        font-size: 5.8vw;
+        font-size: 5vw;
         /* margin-top: 63vw; */
         margin-top: 64vw;
     }
