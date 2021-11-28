@@ -302,13 +302,16 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
+    ::-webkit-scrollbar-track{
+        display: none;
+    }
     h1 {
         font-size: 6.9vw;
     }
     h3 {
         font-size: 7.5vw;
         margin-top: 56vw;
-        margin-left: -34vw;
+        margin-left: -24vw;
     }
     #image2 {
         height: 80vw;
@@ -363,6 +366,9 @@ label {
     }
 }
 @media screen and (max-width: 425px) {
+    body{
+        overflow-y: auto;
+    }
     h3 {
         font-size: 7.2vw;
         margin-top: 61vw;
@@ -370,8 +376,14 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
+    ::-webkit-scrollbar-track{
+        display: none;
+    }
 }
 @media screen and (max-width: 375px) {
+    body{
+        overflow-y: auto;
+    }
     h3 {
         font-size: 7vw;
         margin-top: 63vw;
@@ -379,8 +391,14 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
+    ::-webkit-scrollbar-track{
+        display: none;
+    }
 }
 @media screen and (max-width: 360px) {
+    body{
+        overflow-y: auto;
+    }
     h3 {
         font-size: 7vw;
         margin-top: 64vw;
@@ -388,8 +406,14 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
+    ::-webkit-scrollbar-track{
+        display: none;
+    }
 }
 @media screen and (max-width: 320px) {
+    body{
+        overflow-y: auto;
+    }
     h3 {
         font-size: 6.7vw;
         margin-top: 67vw;
@@ -397,13 +421,22 @@ label {
     ::-webkit-scrollbar {
         display: none;
     }
+    ::-webkit-scrollbar-track{
+        display: none;
+    }
 }
 @media screen and (max-width: 280px) {
+    body{
+        overflow-y: auto;
+    }
     h3 {
         font-size: 6.3vw;
         margin-top: 71vw;
     }
     ::-webkit-scrollbar {
+        display: none;
+    }
+    ::-webkit-scrollbar-track{
         display: none;
     }
 }
