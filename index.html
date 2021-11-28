@@ -8,116 +8,124 @@
             name="description"
             content="completador dos três últimos números do CPF"
         />
-        <title>Application Web for CPF</title>
+        <link rel="shortcut icon" href="img/favicon2.ico" type="image/x-icon" />
+        <title>Completador de CPF</title>
         <script src="teste.js" defer></script>
         <link rel="stylesheet" href="style.css" />
         <style></style>
     </head>
     <body>
+        <input type="checkbox" class="marcar" />
         <div id="bgTitle">
             <h1 class="sorte">
                 Aplicação que completa os 3 últimos números de seu CPF
             </h1>
         </div>
-    <div class="fieldSetGrup">    
-        <div>
-            <div class="fildEst">
+
+        <div class="fieldSetGrup">
+            <div>
+                <div class="fildEst">
                     <h4 class="classh4">Selecione o Estado emissor do CPF</h4>
-                
-                <p>
-                    <!-- <label class="classLabel" for="cEst">Estado:</label> -->
-                    <select name="tEst" class="cEst" onfocus="focus">
-                        <optgroup label="Região Sul">
-                            <option value="0">Rio Grande do Sul - RS</option>
-                            <option value="9">Paraná - PR</option>
-                            <option value="9">Santa Catarina - SC</option>
-                        </optgroup>
-                        <optgroup label="Região Suldeste">
-                            <option value="8">São Paulo - SP</option>
-                            <option selected value="7">
-                                Rio de Janeiro - RJ
-                            </option>
-                            <option value="7">Espirito Santo - ES</option>
-                            <option value="6">Minas Gerais - MG</option>
-                        </optgroup>
-                        <optgroup label="Região Nordeste">
-                            <option value="5">Bahia - BA</option>
-                            <option value="5">Sergipe - SE</option>
-                            <option value="4">Alagoas - AL</option>
-                            <option value="4">Paraíba - PB</option>
-                            <option value="4">Pernambuco - PE</option>
-                            <option value="4">Rio Grande do Norte - RN</option>
-                            <option value="3">Ceará - CE</option>
-                            <option value="3">Maranhão - MA</option>
-                            <option value="3">Piauí - PI</option>
-                        </optgroup>
-                        <optgroup label="Região Norte">
-                            <option value="2">Acre - AC</option>
-                            <option value="2">Amazonas - AM</option>
-                            <option value="2">Amapá - AP</option>
-                            <option value="2">Pará - PA</option>
-                            <option value="2">Rondônia - RO</option>
-                            <option value="2">Roraima - RR</option>
-                            <option value="1">Tocantins - TO</option>
-                        </optgroup>
-                        <optgroup label="Região Centro-Oeste">
-                            <option value="1">Distrito Federal - DF</option>
-                            <option value="1">Goias - GO</option>
-                            <option value="1">Mato Grosso do Sul - MS</option>
-                            <option value="1">Mato Grosso - MT</option>
-                        </optgroup>
-                    </select>
-                </p>
+
+                    <p>
+                        <!-- <label class="classLabel" for="cEst">Estado:</label> -->
+                        <select name="tEst" class="cEst" onfocus="focus">
+                            <optgroup label="Região Sul">
+                                <option value="0">
+                                    Rio Grande do Sul - RS
+                                </option>
+                                <option value="9">Paraná - PR</option>
+                                <option value="9">Santa Catarina - SC</option>
+                            </optgroup>
+                            <optgroup label="Região Suldeste">
+                                <option value="8">São Paulo - SP</option>
+                                <option selected value="7">
+                                    Rio de Janeiro - RJ
+                                </option>
+                                <option value="7">Espirito Santo - ES</option>
+                                <option value="6">Minas Gerais - MG</option>
+                            </optgroup>
+                            <optgroup label="Região Nordeste">
+                                <option value="5">Bahia - BA</option>
+                                <option value="5">Sergipe - SE</option>
+                                <option value="4">Alagoas - AL</option>
+                                <option value="4">Paraíba - PB</option>
+                                <option value="4">Pernambuco - PE</option>
+                                <option value="4">
+                                    Rio Grande do Norte - RN
+                                </option>
+                                <option value="3">Ceará - CE</option>
+                                <option value="3">Maranhão - MA</option>
+                                <option value="3">Piauí - PI</option>
+                            </optgroup>
+                            <optgroup label="Região Norte">
+                                <option value="2">Acre - AC</option>
+                                <option value="2">Amazonas - AM</option>
+                                <option value="2">Amapá - AP</option>
+                                <option value="2">Pará - PA</option>
+                                <option value="2">Rondônia - RO</option>
+                                <option value="2">Roraima - RR</option>
+                                <option value="1">Tocantins - TO</option>
+                            </optgroup>
+                            <optgroup label="Região Centro-Oeste">
+                                <option value="1">Distrito Federal - DF</option>
+                                <option value="1">Goias - GO</option>
+                                <option value="1">
+                                    Mato Grosso do Sul - MS
+                                </option>
+                                <option value="1">Mato Grosso - MT</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                </div>
+                <hr />
             </div>
-            <hr>
-        </div>
-        <div>
-            <div class="cpf">
-            
-                    <h4 class="classh4">Digite os 8 (oito) primeiros números do CPF</h4>
-                <div class="getInput">
-                    
-                    <input
-                        type="text"
-                        class="oito_Numeros oitoNumeros3"
-                        id="oito_Numeros2"
-                        name="n_numeros"
-                        size="6"
-                        minlength="8"
-                        maxlength="8"
-                        placeholder="Digite o número"
-                    />
-                    <input
-                        class="estado"
-                        type="button"
-                        id="maker"
-                        onclick="clickAddNamber()"
-                        value=" Completar CPF "
-                    />
-                    <input
-                        class="estado"
-                        type="button"
-                        id="BtnPesquisa"
-                        onclick="areaInput()"
-                        value="Nova Consulta"
-                    />
-                    
+            <div>
+                <div class="cpf">
+                    <h4 class="classh4">
+                        Digite os 8 (oito) primeiros números do CPF
+                    </h4>
+                    <div class="getInput">
+                        <input
+                            type="text"
+                            class="oito_Numeros oitoNumeros3"
+                            id="oito_Numeros2"
+                            name="n_numeros"
+                            size="6"
+                            minlength="8"
+                            maxlength="8"
+                            placeholder="Digite o número"
+                        />
+                        <input
+                            class="estado"
+                            type="button"
+                            id="maker"
+                            onclick="clickAddNamber()"
+                            value=" Completar CPF "
+                        />
+                        <input
+                            class="estado"
+                            type="button"
+                            id="BtnPesquisa"
+                            onclick="areaInput()"
+                            value="Nova Consulta"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>    
         <div id="addSaida">
-            <img id="image2"src="img/img2.png" alt="cartão CPF" />
+            <img id="image2" src="img/img2.png" alt="cartão CPF" />
             <h3 class="res">000.000.000-00</h3>
         </div>
-    <container class="popup-wrapper">
-        <div class="popup">
-            <label class="popup-close">X</label>
-            <div class="popup-content">
-                <h2 id="subtitulo">Atenção!</h2>
-                <p id="paragrafo"></p>
+        <container class="popup-wrapper">
+            <div class="popup">
+                <label class="popup-close">X</label>
+                <div class="popup-content">
+                    <h2 id="subtitulo">Atenção!</h2>
+                    <p id="paragrafo"></p>
+                </div>
             </div>
-        </div>
-    </container>
+        </container>
     </body>
 </html>

@@ -18,6 +18,7 @@ const operationDisable = () =>{
     notActiveEst = true
 }
 function Init() {
+    document.querySelector('.marcar').hidden = true
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
     // document.querySelector(".cEst").focus();
@@ -44,6 +45,12 @@ function checkInput(e) {
     popupWrapper.style.display = 'block'
     operationDisable();
 }
+const fundo = document.querySelector('body')
+const radioButton= document.querySelector(".marcar")
+fundo.addEventListener('click', ()=>{ 
+     radioButton.setAttribute("checked", "checked")
+    })
+
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
     const btnSearhGerador = document.querySelector("#maker");
