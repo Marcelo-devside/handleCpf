@@ -308,7 +308,7 @@ label {
     h3 {
         font-size: 7.5vw;
         margin-top: 51vw;
-        margin-left: -20vw;
+        margin-left: -21vw;
     }
     #image2 {
         height: 70vw;
@@ -381,9 +381,9 @@ label {
     }
     h3 {
         /* font-size: 7vw; */
-        font-size: 5.8vw;
+        font-size: 3vw;
         /* margin-top: 63vw; */
-        margin-top: 59vw;
+        margin-top: 57vw;
     }
     ::-webkit-scrollbar {
         display: none;
