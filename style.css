@@ -357,11 +357,11 @@ label {
     }
     #maker {
         position: fixed;
-        margin-top: 10em;
+        margin-top: 5em;
     }
     #BtnPesquisa{
         position: fixed;
-        margin-top: 10em;
+        margin-top: 5em;
     }
     .estado {
         width: 92%;
@@ -390,7 +390,7 @@ label {
     #addSaida {
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        /* align-items: center; */
         margin-top: 20em;
         margin-bottom: 40vh;
     }
