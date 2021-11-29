@@ -6,6 +6,9 @@
 
 * {
     font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 body {
     display: flex;
@@ -13,6 +16,11 @@ body {
     background-color: #00032f;
     align-items: center;
     overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.marcar{
+    position: absolute;
 }
 #image1 {
     visibility: hidden;
@@ -23,10 +31,9 @@ body {
 #bgTitle {
     display: flex;
     justify-content: center;
-    margin-top: 13px;
     margin-bottom: 80px;
     background-color: #e5058c;
-    width: 110%;
+    width: 100%;
 }
 h1 {
     font-size: 3em;
@@ -56,16 +63,13 @@ h3 {
     margin-top: -15px;
 }
 #oito_Numeros2 {
-    position: relative;
-    height: 2.5em;
-    width: 11em;
-    padding-bottom: 4.3px;
+    height: 3.3em;
+    width: 11.5em;
     margin-right: 4em;
     border-radius: 5px;
     white-space: 30em;
     border-color: rgb(122, 120, 120);
     background-color: #ffffff;
-    border-style: double;
     font-weight: 700;
     letter-spacing: 0.5em;
     font-size: 1.1em;
@@ -94,7 +98,7 @@ h3 {
     text-align: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 0;
+    margin-top: 50px;
 }
 .getInput {
     display: flex;
@@ -112,6 +116,7 @@ h3 {
     font-weight: 800;
     cursor: pointer;
     border-color: rgb(122, 120, 120);
+    margin-top: 40px;
 }
 .estado {
     height: 3.4em;
@@ -142,7 +147,7 @@ fieldset {
     color: #ced4da;
 }
 hr {
-    margin: 30px auto 15px auto;
+    margin: 74px -150px 15px -150px;
 }
 h4 {
     font-size: 2em;
@@ -215,11 +220,12 @@ label {
 }
 #subtitulo {
     color: crimson;
-    font-size: 2em;
+    font-size: 2.5em;
+    margin-bottom: 1em;
 }
 #paragrafo {
     font-weight: 600;
-    font-size: 1.1em;
+    font-size: 1.4em;
 }
 @media screen and (max-width: 1600px) {
     h1 {
@@ -249,7 +255,11 @@ label {
 @media screen and (max-width: 1042px) {
     h1 {
         font-size: 2.3em;
-        width: 78%;
+    }
+}
+@media screen and (max-width: 906px) {
+    hr{
+        margin: 74px -50px 15px -50px;
     }
 }
 @media screen and (max-width: 870px) {
@@ -268,15 +278,15 @@ label {
         font-size: 1.7em;
     }
 }
-/* @media screen and (width: 1024px) {
-
-} */
 @media screen and (max-width: 650px) {
     .popup-wrapper {
         background: rgba(0, 0, 0, 0.8);
     }
     h1 {
         font-size: 5.9vw;
+    }
+    hr{
+        margin: 74px -30px 15px -30px;
     }
     #image2 {
         height: 21.5em;
@@ -295,8 +305,8 @@ label {
     }
 }
 @media screen and (max-width: 550px) {
-    body {
-        overflow-y: auto;
+    body .background {
+        overflow-y: hidden;
         overflow-x: hidden;
     }
     ::-webkit-scrollbar {
@@ -305,17 +315,30 @@ label {
     h1 {
         font-size: 6.9vw;
     }
+    .cpf{
+        margin-top: 1vh;
+    }
+    .fildEst {
+        margin-bottom: 1vh;
+    }
+    hr{
+        display: none;
+    }
     h3 {
         font-size: 7.5vw;
-        margin-top: 51vw;
-        margin-left: -21vw;
+        /* margin-left: -21vw; */
+        margin-left: 25px;
+        /* margin-right: 0px; */
+        /* margin-right: 30px ; */
     }
     #image2 {
-        height: 70vw;
-        width: 100vw;
+        height: 60vw;
+        width: 95vw;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
     #oito_Numeros2::placeholder {
-    font-size: 20px;
+    font-size: 15px;
     }
     .getInput {
         display: flex;
@@ -325,26 +348,35 @@ label {
     }
     #oito_Numeros2 {
         margin-right: 0px;
-        margin-top:15px;
-        margin-bottom: 60px;
-        width: 90%;
-        height: 3em;
+        margin-top:2px;
+        margin-bottom: 15vh;
+        width: 92%;
+        height: 2.2em;
         font-size: 1.5em;
         border-radius: 5px;
     }
+    #maker {
+        position: fixed;
+        margin-top: 10em;
+    }
+    #BtnPesquisa{
+        position: fixed;
+        margin-top: 10em;
+    }
     .estado {
         width: 92%;
-        height: 3.6em;
-        font-size: 1.5em;
+        height: 4.6em;
+        font-size: 1em;
         margin-right: -6px;
         padding: 0px;
         margin: 0px;
-        margin-top: 10%;
+        margin-top: 0%;
     }
     .cEst {
         width: 92%;
-        height: 3.3em;
-        font-size: 1.5em;
+        height: 3em;
+        font-size: 1em;
+        margin-top: 1vh;
     }
     .classh4 {
         font-size: 6vw;
@@ -353,18 +385,22 @@ label {
     #bgTitle {
         display: flex;
         justify-content: center;
+        position:fixed;
     }
     #addSaida {
-        position: absolute;
-        margin-top: 20vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 20em;
+        margin-bottom: 40vh;
     }
     .fieldSetGrup {
-        margin-top: 180%;
-        margin-bottom: 50%;
+        margin-top: 25vh;
+        margin-bottom: 70vh;
     }
 }
 @media screen and (max-width: 425px) {
-    body{
+    body {
         overflow-y: auto;
     }
     h3 {
@@ -376,21 +412,19 @@ label {
     }
 }
 @media screen and (max-width: 375px) {
-    body{
+    body  {
         overflow-y: auto;
     }
     h3 {
-        /* font-size: 7vw; */
-        font-size: 3vw;
-        /* margin-top: 63vw; */
-        margin-top: 57vw;
+        font-size: 6.5vw;
+        margin-top: 32vw;
     }
     ::-webkit-scrollbar {
         display: none;
     }
 }
 @media screen and (max-width: 360px) {
-    body{
+    body {
         overflow-y: auto;
     }
     h3 {
@@ -402,7 +436,7 @@ label {
     }
 }
 @media screen and (max-width: 320px) {
-    body{
+    body {
         overflow-y: auto;
     }
     h3 {
@@ -414,12 +448,12 @@ label {
     }
 }
 @media screen and (max-width: 280px) {
-    body{
+    body {
         overflow-y: auto;
     }
     h3 {
-        font-size: 6.3vw;
-        margin-top: 71vw;
+        font-size: 4.3vw;
+        margin-top: 60vw;
     }
     ::-webkit-scrollbar {
         display: none;

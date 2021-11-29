@@ -28,7 +28,7 @@ window.addEventListener("load", Init);
 
 popupWrapper.addEventListener('click', (event)=>{
     const spot = event.target.classList.value
-    if (spot === "popup-wrapper" || spot === "popup-close"){
+    if (spot === "popup-close"){
         popupWrapper.style.display = 'none'
         document.querySelector("#oito_Numeros2").focus();
         areaInputMask()
