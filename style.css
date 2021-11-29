@@ -390,7 +390,6 @@ label {
     #addSaida {
         display: flex;
         justify-content: flex-start;
-        /* align-items: center; */
         margin-top: 20em;
         margin-bottom: 40vh;
     }
@@ -417,7 +416,7 @@ label {
     }
     h3 {
         font-size: 6.5vw;
-        margin-top: 32vw;
+        margin-top: 0vw;
     }
     ::-webkit-scrollbar {
         display: none;
