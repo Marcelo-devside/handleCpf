@@ -18,12 +18,11 @@ const operationDisable = () =>{
     notActiveEst = true
 }
 function Init() {
-    // document.querySelector('.marcar').hidden = true
+    document.querySelector('.marcar').hidden = true
     document.querySelector("#BtnPesquisaMobile").style.display = "none"
     document.querySelector("#BtnMakerMobile").style.display = "none"
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
-    // document.querySelector(".cEst").focus();
     areaInputMask()
 }
 window.addEventListener("load", Init);
@@ -48,7 +47,9 @@ function checkInput(e) {
         return true;
     }
     e.preventDefault();
+    e.addEventListener("keypress", () => {
     radioButton.setAttribute("checked", "checked")
+})
     paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
     popupWrapper.style.display = 'block'
     operationDisable();
@@ -136,7 +137,6 @@ BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
 function validationOfSize2() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
-        // Init()
         popupWrapper.style.display = 'block'
         paragrafo.textContent ="Você não digitou os oito números!";
         btnSearh2("initial", "none", "none");
@@ -193,5 +193,4 @@ function areaInput2() {
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
-    // Init();
 }
