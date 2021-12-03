@@ -47,7 +47,7 @@ function checkInput(e) {
         return true;
     }
     e.preventDefault();
-    e.addEventListener("keypress", () => {
+    window.addEventListener("keypress", () => {
     radioButton.setAttribute("checked", "checked")
 })
     paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
