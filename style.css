@@ -308,9 +308,16 @@ label {
     }
 }
 @media screen and (max-width: 550px) {
-    body .background {
+    body {
+
         overflow-y: hidden;
         overflow-x: hidden;
+    }
+    .background{
+        display: flex;
+        justify-content:center;
+        text-align: center;
+        
     }
     ::-webkit-scrollbar {
         display: hidden;
@@ -356,6 +363,7 @@ label {
         align-items: center;
         justify-content:center;
         flex-direction: column;
+
     }
     #oito_Numeros2 {
         margin-right: 0px;
@@ -399,9 +407,9 @@ label {
         visibility: visible;
     }
     .fieldSetGrup {
-        /* display: none; */
         position: absolute;
         margin-top: 25vh;
+
     }
 }
 @media screen and (max-width: 425px) {

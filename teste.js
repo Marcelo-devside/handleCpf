@@ -18,7 +18,7 @@ const operationDisable = () =>{
     notActiveEst = true
 }
 function Init() {
-    document.querySelector('.marcar').hidden = true
+    // document.querySelector('.marcar').hidden = true
     document.querySelector("#BtnPesquisaMobile").style.display = "none"
     document.querySelector("#BtnMakerMobile").style.display = "none"
     const entr = document.querySelector("#oito_Numeros2");
@@ -36,6 +36,11 @@ popupWrapper.addEventListener('click', (event)=>{
         areaInputMask()
     }
 })
+const fundo = document.querySelector('body')
+const radioButton= document.querySelector(".marcar")
+fundo.addEventListener('click', ()=>{ 
+     radioButton.setAttribute("checked", "checked")
+    })
 function checkInput(e) {
     const char = String.fromCharCode(e.keyCode);
     const pattern = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -43,16 +48,11 @@ function checkInput(e) {
         return true;
     }
     e.preventDefault();
+    radioButton.setAttribute("checked", "checked")
     paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
     popupWrapper.style.display = 'block'
     operationDisable();
 }
-const fundo = document.querySelector('body')
-const radioButton= document.querySelector(".marcar")
-fundo.addEventListener('click', ()=>{ 
-     radioButton.setAttribute("checked", "checked")
-    })
-
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
     const btnSearhGerador = document.querySelector("#maker");
