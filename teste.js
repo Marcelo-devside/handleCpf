@@ -9,14 +9,14 @@ const areaInputMask = () => {
         "$1.$2.$3-"
     );
 };
-const operationDisable = () =>{ 
-    let notActiveButton = document.querySelector("#maker").disabled
-    notActiveButton = true
-    let notActiveInput = typingNamber = document.querySelector(".oito_Numeros").disabled
-    notActiveInput = true
-    let notActiveEst = document.querySelector(".cEst").disabled
-    notActiveEst = true
-}
+// const operationDisable = () =>{ 
+//     let notActiveButton = document.querySelector("#maker").disabled
+//     notActiveButton = true
+//     let notActiveInput = typingNamber = document.querySelector(".oito_Numeros").disabled
+//     notActiveInput = true
+//     let notActiveEst = document.querySelector(".cEst").disabled
+//     notActiveEst = true
+// }
 function Init() {
     document.querySelector('.marcar').hidden = true
     document.querySelector("#BtnPesquisaMobile").style.display = "none"
@@ -52,7 +52,7 @@ function checkInput(e) {
 })
     paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
     popupWrapper.style.display = 'block'
-    operationDisable();
+    // operationDisable();
 }
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
@@ -126,7 +126,7 @@ function btnSearh2(optionMobile1, optionMobile2, optionMobile3) {
 }
 const BtnStartMobile = document.querySelector("#BtnStartMobile");
 const disableImage = document.querySelector("#addSaida");
-const dataInput1 = document.querySelector(".fildEst");
+const dataInput1 = document.querySelector(".fieldEst");
 const dataInput2 = document.querySelector(".cpf");
 BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
     btnSearh2("initial", "none", "none")

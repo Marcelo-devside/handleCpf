@@ -19,15 +19,21 @@ body {
     height: 100%;
     width: 100%;
 }
-#BtnStartMobile{
+.btnMobile{
     display: none;
 }
+#small-img{
+    display: none;
+}
+/* #BtnStartMobile{
+    display: none;
+} */
 .marcar{
     position: absolute;
 }
-#image1 {
+/* #image1 {
     visibility: hidden;
-}
+} */
 #image2 {
     margin-top: 80px;
 }
@@ -48,7 +54,7 @@ h1 {
     letter-spacing: 0.1em;
     color: #fff;
 }
-h3 {
+.res {
     position: absolute;
     font-size: 37px;
     margin-top: 260px;
@@ -64,6 +70,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
     margin-top: -15px;
+    
 }
 #oito_Numeros2 {
     height: 3.3em;
@@ -90,7 +97,7 @@ h3 {
 #oito_Numeros2:focus::placeholder {
     color: #ffffff;
 }
-.fildEst {
+.fieldEst {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -167,6 +174,7 @@ label {
     position: relative;
     margin-bottom: 10vw;
     justify-content: center;
+    visibility: visible;
 }
 #image2 {
     position: relative;
@@ -294,8 +302,9 @@ label {
     #image2 {
         height: 21.5em;
         width: 28em;
+
     }
-    h3 {
+    .res {
         font-size: 32px;
         margin-top: 260px;
         margin-left: -215px;
@@ -331,20 +340,27 @@ label {
     .cpf{
         margin-top: 1vh;
     }
-    .fildEst {
+    .fieldEst {
         visibility: hidden;
         margin-bottom: 1vh;
     }
     hr{
         display: none;
     }
-    h3 {
-        font-size: 7.5vw;
-        margin-left: 25px;
+    .res {
+        /* text-align: left; */
+        font-size: 7.3vw;
+        margin-top: 1.2em;
+        margin-left: 5px;
     }
-    #image2 {
+    #image2{
+        display: none;
+    }
+    #small-img {
+        display: initial;
         height: 60vw;
         width: 95vw;
+        margin-top: 5em;
     }
     #oito_Numeros2::placeholder {
     font-size: 15px;
@@ -416,10 +432,10 @@ label {
     body {
         overflow-y: auto;
     }
-    h3 {
+    /* .res {
         font-size: 7.2vw;
         margin-top: 61vw;
-    }
+    } */
     ::-webkit-scrollbar {
         display: none;
     }
@@ -428,10 +444,10 @@ label {
     body  {
         overflow-y: auto;
     }
-    h3 {
+    /* .res {
         font-size: 4.5vw;
         margin-top: 0vw;
-    }
+    } */
     ::-webkit-scrollbar {
         display: none;
     }
@@ -440,10 +456,10 @@ label {
     body {
         overflow-y: auto;
     }
-    h3 {
+    /* .res {
         font-size: 7vw;
         margin-top: 64vw;
-    }
+    } */
     ::-webkit-scrollbar {
         display: none;
     }
@@ -452,10 +468,10 @@ label {
     body {
         overflow-y: auto;
     }
-    h3 {
+    /* .res {
         font-size: 6.7vw;
         margin-top: 67vw;
-    }
+    } */
     ::-webkit-scrollbar {
         display: none;
     }
@@ -464,10 +480,10 @@ label {
     body {
         overflow-y: auto;
     }
-    h3 {
+    /* .res {
         font-size: 4.3vw;
         margin-top: 60vw;
-    }
+    } */
     ::-webkit-scrollbar {
         display: none;
     }
