@@ -19,16 +19,19 @@ body {
     height: 100%;
     width: 100%;
 }
-.btnMobile{
+.btnMobile {
     display: none;
 }
-#small-img{
+#small-img {
     display: none;
 }
 /* #BtnStartMobile{
     display: none;
 } */
-.marcar{
+.sorte{
+    z-index: 99;
+}
+.marcar {
     position: absolute;
 }
 /* #image1 {
@@ -43,7 +46,6 @@ body {
     margin-bottom: 80px;
     background-color: #e5058c;
     width: 100%;
-    z-index: 99;
 }
 h1 {
     font-size: 3em;
@@ -71,7 +73,6 @@ h1 {
     justify-content: center;
     flex-direction: column;
     margin-top: -15px;
-    
 }
 #oito_Numeros2 {
     height: 3.3em;
@@ -270,7 +271,7 @@ label {
     }
 }
 @media screen and (max-width: 906px) {
-    hr{
+    hr {
         margin: 74px -50px 15px -50px;
     }
 }
@@ -297,13 +298,12 @@ label {
     h1 {
         font-size: 5.9vw;
     }
-    hr{
+    hr {
         margin: 74px -30px 15px -30px;
     }
     #image2 {
         height: 21.5em;
         width: 28em;
-
     }
     .res {
         font-size: 32px;
@@ -319,33 +319,31 @@ label {
 }
 @media screen and (max-width: 550px) {
     body {
-
         overflow-y: hidden;
         overflow-x: hidden;
     }
-    .background{
+    .background {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         text-align: center;
-        
     }
     ::-webkit-scrollbar {
         display: hidden;
     }
-    #BtnStartMobile{
+    #BtnStartMobile {
         display: initial;
     }
     h1 {
         font-size: 6.9vw;
     }
-    .cpf{
+    .cpf {
         margin-top: 1vh;
     }
     .fieldEst {
         visibility: hidden;
         margin-bottom: 1vh;
     }
-    hr{
+    hr {
         display: none;
     }
     .res {
@@ -354,7 +352,7 @@ label {
         margin-top: 1.2em;
         margin-left: 5px;
     }
-    #image2{
+    #image2 {
         display: none;
     }
     #small-img {
@@ -364,7 +362,7 @@ label {
         margin-top: 5em;
     }
     #oito_Numeros2::placeholder {
-    font-size: 15px;
+        font-size: 15px;
     }
     .getInput {
         display: flex;
@@ -372,19 +370,20 @@ label {
         flex-direction: column;
         margin-top: 0px;
     }
-    #maker, #BtnPesquisa, .cpf{
+    #maker,
+    #BtnPesquisa,
+    .cpf {
         visibility: hidden;
     }
-    .btnMobile{
+    .btnMobile {
         display: flex;
         align-items: center;
-        justify-content:center;
+        justify-content: center;
         flex-direction: column;
-
     }
     #oito_Numeros2 {
         margin-right: 0px;
-        margin-top:2px;
+        margin-top: 2px;
         margin-bottom: 0.3em;
         width: 92%;
         height: 2.2em;
@@ -413,7 +412,7 @@ label {
     #bgTitle {
         display: flex;
         justify-content: center;
-        position:fixed;
+        position: fixed;
     }
     #addSaida {
         position: relative;
@@ -426,7 +425,6 @@ label {
     .fieldSetGrup {
         position: absolute;
         margin-top: 25vh;
-
     }
 }
 @media screen and (max-width: 425px) {
@@ -442,7 +440,7 @@ label {
     }
 }
 @media screen and (max-width: 375px) {
-    body  {
+    body {
         overflow-y: auto;
     }
     /* .res {
