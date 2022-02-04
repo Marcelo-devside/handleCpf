@@ -37,6 +37,7 @@ body {
     margin-bottom: 80px;
     background-color: #e5058c;
     width: 100%;
+    z-index: 99;
 }
 h1 {
     font-size: 3em;
