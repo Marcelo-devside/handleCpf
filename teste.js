@@ -9,14 +9,6 @@ const areaInputMask = () => {
         "$1.$2.$3-"
     );
 };
-// const operationDisable = () =>{ 
-//     let notActiveButton = document.querySelector("#maker").disabled
-//     notActiveButton = true
-//     let notActiveInput = typingNamber = document.querySelector(".oito_Numeros").disabled
-//     notActiveInput = true
-//     let notActiveEst = document.querySelector(".cEst").disabled
-//     notActiveEst = true
-// }
 function Init() {
     document.querySelector('.marcar').hidden = true
     document.querySelector("#BtnPesquisaMobile").style.display = "none"
@@ -46,13 +38,12 @@ function checkInput(e) {
     if (char in pattern) {
         return true;
     }
-    e.preventDefault();
-    window.addEventListener("keypress", () => {
-    radioButton.setAttribute("checked", "checked")
+    window.addEventListener("keypress", (e) => {
+        e.preventDefault();
+        radioButton.setAttribute("checked", "checked")
 })
     paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
     popupWrapper.style.display = 'block'
-    // operationDisable();
 }
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
@@ -104,7 +95,10 @@ function clickAddNamber() {
         );
     };
     resultExitMask();
-}
+} 
+// if (numberExit != "00000000000"){
+//     btnSearh("none", "initial");
+// }
 
 function areaInput() {
     btnSearh("initial", "none");
@@ -114,6 +108,7 @@ function areaInput() {
     defaultEst.value = "7";
     Init();
 }
+
 // -----------------------------------------------------------------------------
 // mobile
 function btnSearh2(optionMobile1, optionMobile2, optionMobile3) {
@@ -125,14 +120,23 @@ function btnSearh2(optionMobile1, optionMobile2, optionMobile3) {
     BtnStartMobile.style.display = optionMobile3;
 }
 const BtnStartMobile = document.querySelector("#BtnStartMobile");
+// BtnStartMobile.display = "initial"
 const disableImage = document.querySelector("#addSaida");
 const dataInput1 = document.querySelector(".fieldEst");
 const dataInput2 = document.querySelector(".cpf");
+const inputOfNumberMobile = document.querySelector("#oito_Numeros2");
+const test = document.querySelector(".res").value;
+if (test !== "000.000.000-00"){
+    btnSearh("initial", "none");
+}
 BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
     btnSearh2("initial", "none", "none")
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
+    inputOfNumberMobile.value = "";
+    document.querySelector("#small-img").style.visibility = "hidden";
+    document.querySelector(".res").style.visibility = "hidden";
 })
 function validationOfSize2() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
@@ -148,7 +152,10 @@ function validationOfSize2() {
 }
 function clickAddNamber2() {
     btnSearh2("none", "initial", "none");
-    disableImage.style.visibility = "visible";
+    document.querySelector("#small-img").style.visibility = "visible";
+    document.querySelector("#BtnStartMobile").style.visibility = "visible";
+    document.querySelector(".res").style.visibility = "visible";
+    // disableImage.style.visibility = "visible";
     dataInput1.style.visibility = "hidden";
     dataInput2.style.visibility = "hidden";
     validationOfSize2();
@@ -188,9 +195,35 @@ function areaInput2() {
     btnSearh2("initial", "none", "none");
     const araseInput = document.querySelector("#oito_Numeros2");
     const defaultEst = document.querySelector(".cEst");
+    document.querySelector("#small-img").style.visibility = "hidden";
+    document.querySelector(".res").style.visibility = "hidden";
     araseInput.value= null;
     defaultEst.value = "7";
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
 }
+function sizeScream() {
+    window.addEventListener("resize", () => {
+        largura = window.innerWidth 
+        if (largura > 550 ){
+            document.querySelector("#addSaida").style.visibility = "visible";
+            document.querySelector(".fieldEst").style.visibility = "visible";
+            document.querySelector(".cpf").style.visibility = "visible";
+            document.querySelector(".res").style.visibility = "visible";
+        } else {
+            // btnSearh2("none", "none", "initial");
+            // window.location.reload(true)
+            // document.querySelector("#addSaida").style.visibility = "hidden";
+            document.querySelector(".fieldEst").style.visibility = "hidden";
+            document.querySelector(".cpf").style.visibility = "hidden";
+            document.querySelector("#small-img").style.visibility = "visible";
+            // document.querySelector(".res").style.visibility = "visible";
+            document.querySelector("#BtnStartMobile").style.visibility = "visible";
+            // document.querySelector("#BtnPesquisaMobile").style.visibility = "hidden";
+            // document.querySelector("#BtnMakerMobile").style.visibility = "hidden";
+        }
+        })
+    }
+    sizeScream()
+
