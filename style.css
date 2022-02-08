@@ -499,10 +499,6 @@ label {
 @media screen and (width: 823px) and (orientation: landscape) {
 }
 @media screen and (min-width: 568px) and (max-width: 736px) and (orientation: landscape) {
-    /* dimensões do iphone xr */
-    .res{
-        margin-left: 20px;
-    }
 }
 @media screen and (width: 720px) and (orientation: landscape) {
 }
