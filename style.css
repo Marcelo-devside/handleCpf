@@ -296,14 +296,16 @@ label {
         margin: 74px -30px 15px -30px;
     }
     #image2 {
+        position: relative;
         height: 21.5em;
-        width: 28em;
+        /* width: 28em; */
+        width: 33.2em;
     }
     .res {
         visibility: absolute;
-        font-size: 32px;
+        font-size: 40px;
         margin-top: 260px;
-        margin-left: -215px;
+        margin-left: -251px;
     }
     .popup {
         width: 70vw;
@@ -325,10 +327,10 @@ label {
     ::-webkit-scrollbar {
         display: hidden;
     }
-    #BtnStartMobile {
+    /* #BtnStartMobile {
         display: initial;
         visibility: "visible";
-    }
+    } */
     h1 {
         font-size: 6.9vw;
     }

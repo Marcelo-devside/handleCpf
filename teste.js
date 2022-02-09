@@ -155,7 +155,7 @@ function clickAddNamber2() {
     document.querySelector("#small-img").style.visibility = "visible";
     // document.querySelector("#BtnStartMobile").style.visibility = "visible";
     document.querySelector(".res").style.visibility = "visible";
-    // disableImage.style.visibility = "visible";
+    disableImage.style.visibility = "visible";
     dataInput1.style.visibility = "hidden";
     dataInput2.style.visibility = "hidden";
     validationOfSize2();
@@ -203,22 +203,28 @@ function areaInput2() {
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
 }
+let getRes = document.querySelector('.res').textContent
+const handleRes = () => {
+    if (getRes !== '000.000.000-00'){
+        btnSearh("none", "initial");
+    }
+}
 function sizeScream() {
     window.addEventListener("resize", () => {
         largura = window.innerWidth 
-        if (largura > 550 ){
+        if (largura > 550){
             document.querySelector("#addSaida").style.visibility = "visible";
             document.querySelector(".fieldEst").style.visibility = "visible";
             document.querySelector(".cpf").style.visibility = "visible";
             document.querySelector(".res").style.visibility = "visible";
+            
         } else {
+            document.querySelector("#BtnPesquisaMobile").style.display = "initial";
             document.querySelector("#addSaida").style.visibility = "hidden";
             document.querySelector(".fieldEst").style.visibility = "hidden";
             document.querySelector(".cpf").style.visibility = "hidden";
             document.querySelector("#small-img").style.visibility = "visible";
             document.querySelector(".res").style.visibility = "visible";
-            // document.querySelector("#BtnStartMobile").style.visibility = "visible";
-            document.querySelector("#BtnStartMobile").style.display = "initial";
         }
         })
     }
