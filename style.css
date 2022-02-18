@@ -327,10 +327,10 @@ label {
     ::-webkit-scrollbar {
         display: hidden;
     }
-    /* #BtnStartMobile {
+    #BtnStartMobile {
         display: initial;
-        visibility: "visible";
-    } */
+        /* visibility: "visible"; */
+    }
     h1 {
         font-size: 6.9vw;
     }
@@ -388,8 +388,8 @@ label {
         border-radius: 5px;
     }
     .estado {
-        width: 92%;
-        height: 4.6em;
+        width: 95%;
+        height: 5em;
         font-size: 1em;
         margin-right: -6px;
         padding: 0px;
@@ -423,45 +423,84 @@ label {
         position: absolute;
         margin-top: 25vh;
     }
+    .background{
+        margin-top: -2em;
+    }
 }
 @media screen and (max-width: 519px) {
     .res {
         font-size: 6.7vw;
         margin-top: 7em;
     }
+    .estado{
+        margin-top: -1%;
+    }
 }
 @media screen and (max-width: 480px) {
     .res {
         margin-top: 7.2em;
     }
+    .estado{
+        margin-top: -2%;
+    }
 }
 @media screen and (max-width: 450px) {
+    #addSaida {
+        margin-top: 18vh;
+    }
     .res {
         font-size: 6.5vw;
         margin-top: 7.6em;
         margin-left: 20px;
     }
+    .estado{
+        margin-top: -5%;
+    }
+    .align{
+        margin-top: -15px;
+    }
 }
 @media screen and (max-width: 430px) {
+    #addSaida {
+        margin-top: 21vh;
+    }
     .res {
         font-size: 6.2vw;
         margin-top: 8.2em;
         margin-left: 19px;
     }
+    .background{
+        margin-top: -4em;
+    }
 }
 @media screen and (max-width: 395px) {
+    #addSaida {
+        margin-top: 21vh;
+    }
     .res {
         font-size: 6.2vw;
         margin-top: 8.4em;
         margin-left: 17px;
+    }
+    .estado{
+        margin-top: -7%;
     }
 }
 @media screen and (max-width: 375px) {
     .res {
         margin-top: 8.6em;
     }
+    .estado{
+        margin-top: -6%;
+    }
+    .background{
+        margin-top: -5em;
+    }
 }
 @media screen and (max-width: 355px) {
+    #addSaida {
+        margin-top: 22vh;
+    }
     .res {
         margin-top: 8.8em;
         margin-left: 16px;
@@ -472,14 +511,26 @@ label {
         margin-top: 9em;
         margin-left: 15px;
     }
+    .estado{
+        height: 4em;
+    }
 }
 @media screen and (max-width: 320px) {
     .res {
         margin-top: 9.2em;
         margin-left: 15px;
     }
+    .estado{
+        margin-top: -7%;
+    }
+    .background{
+        margin-top: -6em;
+    }
 }
 @media screen and (max-width: 305px) {
+    #addSaida {
+        margin-top: 23vh;
+    }
     .res {
         margin-top: 9.4em;
         margin-left: 13px;
@@ -491,7 +542,19 @@ label {
         margin-top: 10em;
         margin-left: 13px;
     }
+    .background{
+        margin-top: -7em;
+    }
 }
+@media screen and (max-width: 280px) {
+    #addSaida {
+        margin-top: 24vh;
+    }
+    .background{
+        margin-top: -8em;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1030px) and (orientation: landscape) {
 }
 @media screen and (min-width: 737px) and (max-width: 1023px) and (orientation: landscape) {

@@ -98,9 +98,9 @@ function clickAddNamber() {
     };
     resultExitMask();
 } 
-// if (numberExit != areaInputMask){
-//     btnSearh("none", "initial");
-// }
+if (numberExit === areaInputMask){
+    btnSearh("none", "initial");
+}
 
 function areaInput() {
     btnSearh("initial", "none");
@@ -153,7 +153,7 @@ function validationOfSize2() {
 function clickAddNamber2() {
     btnSearh2("none", "initial", "none");
     document.querySelector("#small-img").style.visibility = "visible";
-    // document.querySelector("#BtnStartMobile").style.visibility = "visible";
+    document.querySelector("#BtnStartMobile").style.visibility = "visible";
     document.querySelector(".res").style.visibility = "visible";
     disableImage.style.visibility = "visible";
     dataInput1.style.visibility = "hidden";
@@ -219,12 +219,13 @@ function sizeScream() {
             document.querySelector(".res").style.visibility = "visible";
             
         } else {
-            document.querySelector("#BtnPesquisaMobile").style.display = "initial";
             document.querySelector("#addSaida").style.visibility = "hidden";
             document.querySelector(".fieldEst").style.visibility = "hidden";
             document.querySelector(".cpf").style.visibility = "hidden";
             document.querySelector("#small-img").style.visibility = "visible";
-            document.querySelector(".res").style.visibility = "visible";
+            document.querySelector("#BtnStartMobile").style.display = "initial";
+            document.querySelector("#BtnMakerMobile").style.display = "none";
+            document.querySelector("#BtnPesquisaMobile").style.display = "none";
         }
         })
     }
