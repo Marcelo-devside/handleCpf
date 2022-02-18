@@ -1,15 +1,14 @@
 const paragrafo = document.querySelector("#paragrafo")
 const popupWrapper = document.querySelector(".popup-wrapper")
 const numberExit = document.querySelector(".res")
-const areaInputMask = () => {
+const initalValue = "00000000000";
+ const inicialResult= initalValue.replace(
+    /^(\d{3})+(\d{3})+(\d{3})/,
+    "$1.$2.$3-"
+);
+const areaInputMask = (inicialResult) => {
     const araseResult = document.querySelector(".res");
-    const initalValue = "00000000000";
-     inicialResult= initalValue.replace(
-        /^(\d{3})+(\d{3})+(\d{3})/,
-        "$1.$2.$3-"
-    );
-    araseResult.innerText = inicialResult;
-    return inicialResult
+   return araseResult.innerText = inicialResult;
 };
 function Init() {
     document.querySelector('.marcar').hidden = true
@@ -17,7 +16,7 @@ function Init() {
     document.querySelector("#BtnMakerMobile").style.display = "none"
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
-    areaInputMask()
+    areaInputMask(inicialResult);
 }
 window.addEventListener("load", Init);
 
@@ -26,7 +25,7 @@ popupWrapper.addEventListener('click', (event)=>{
     if (spot === "popup-close"){
         popupWrapper.style.display = 'none'
         document.querySelector("#oito_Numeros2").focus();
-        areaInputMask()
+        // areaInputMask()
     }
 })
 const fundo = document.querySelector('body')
@@ -96,11 +95,9 @@ function clickAddNamber() {
             "$1.$2.$3-"
         );
     };
-    resultExitMask();
+    return resultExitMask();
 } 
-if (numberExit === areaInputMask){
-    btnSearh("none", "initial");
-}
+
 
 function areaInput() {
     btnSearh("initial", "none");
@@ -135,6 +132,7 @@ BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
     inputOfNumberMobile.value = "";
     document.querySelector("#small-img").style.visibility = "hidden";
     document.querySelector(".res").style.visibility = "hidden";
+    areaInputMask(inicialResult);
 })
 function validationOfSize2() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
@@ -202,14 +200,17 @@ function areaInput2() {
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
+    areaInputMask(inicialResult);
 }
-let getRes = document.querySelector('.res').textContent
-const handleRes = () => {
-    if (getRes !== '000.000.000-00'){
-        btnSearh("none", "initial");
-    }
-}
+// let getRes = document.querySelector('.res').textContent
+// const handleRes = () => {
+//     if (getRes !== inicialResult){
+//         btnSearh("none", "initial");
+//     }
+// }
+const numberExit2 = document.querySelector(".res").textContent;
 function sizeScream() {
+
     window.addEventListener("resize", () => {
         largura = window.innerWidth 
         if (largura > 550){
@@ -217,12 +218,12 @@ function sizeScream() {
             document.querySelector(".fieldEst").style.visibility = "visible";
             document.querySelector(".cpf").style.visibility = "visible";
             document.querySelector(".res").style.visibility = "visible";
-            
         } else {
             document.querySelector("#addSaida").style.visibility = "hidden";
             document.querySelector(".fieldEst").style.visibility = "hidden";
             document.querySelector(".cpf").style.visibility = "hidden";
             document.querySelector("#small-img").style.visibility = "visible";
+            document.querySelector(".res").style.visibility = "visible";
             document.querySelector("#BtnStartMobile").style.display = "initial";
             document.querySelector("#BtnMakerMobile").style.display = "none";
             document.querySelector("#BtnPesquisaMobile").style.display = "none";
