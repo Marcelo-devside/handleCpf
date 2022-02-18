@@ -25,9 +25,6 @@ body {
 #small-img {
     display: none;
 }
-.sorte{
-    z-index: 99;
-}
 .marcar {
     position: absolute;
 }
@@ -270,9 +267,9 @@ label {
     }
 }
 @media screen and (max-width: 870px) {
-    .popup-wrapper {
+    /* .popup-wrapper {
         background: rgba(0, 0, 0, 0.8);
-    }
+    } */
     h1 {
         font-size: 2em;
     }
@@ -319,20 +316,25 @@ label {
         overflow-y: hidden;
         overflow-x: hidden;
     }
+    body::-webkit-scrollbar {
+        display: hidden;
+    }
     .background {
         display: flex;
         justify-content: center;
         text-align: center;
+        margin-top: -77px;
     }
-    ::-webkit-scrollbar {
-        display: hidden;
+    .sorte{
+        z-index: 99;
     }
     #BtnStartMobile {
         display: initial;
         /* visibility: "visible"; */
     }
     h1 {
-        font-size: 6.9vw;
+        font-size: 6vw;
+        letter-spacing:0.2px;
     }
     .cpf {
         margin-top: 1vh;

@@ -55,7 +55,7 @@ function btnSearh(option1, option2) {
 function validationOfSize() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
-        Init()
+        // Init()
         btnSearh("initial", "none");
         popupWrapper.style.display = 'block'
         paragrafo.textContent ="Você não digitou os oito números!";
