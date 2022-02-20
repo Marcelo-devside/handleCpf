@@ -25,7 +25,6 @@ popupWrapper.addEventListener('click', (event)=>{
     if (spot === "popup-close"){
         popupWrapper.style.display = 'none'
         document.querySelector("#oito_Numeros2").focus();
-        // areaInputMask()
     }
 })
 const fundo = document.querySelector('body')
@@ -55,7 +54,6 @@ function btnSearh(option1, option2) {
 function validationOfSize() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
-        // Init()
         btnSearh("initial", "none");
         popupWrapper.style.display = 'block'
         paragrafo.textContent ="Você não digitou os oito números!";
@@ -202,33 +200,22 @@ function areaInput2() {
     dataInput2.style.visibility = "visible";
     areaInputMask(inicialResult);
 }
-// let getRes = document.querySelector('.res').textContent
-// const handleRes = () => {
-//     if (getRes !== inicialResult){
-//         btnSearh("none", "initial");
-//     }
-// }
-// const numberExit2 = document.querySelector(".res").textContent;
-// function sizeScream() {
+    window.addEventListener("orientationchange", function(event) {
+        let angulo = event.target.screen.orientation.angle
+        if (angulo === 90){
+            document.querySelector("#addSaida").style.visibility = "visible";
+            document.querySelector(".fieldEst").style.visibility = "visible";
+            document.querySelector(".cpf").style.visibility = "visible";
+            document.querySelector(".res").style.visibility = "visible";
+        } else {
+            document.querySelector(".fieldEst").style.visibility = "visible";
+            document.querySelector(".cpf").style.visibility = "visible";
+            document.querySelector("#small-img").style.visibility = "hidden";
+            document.querySelector(".res").style.visibility = "hidden";
+            document.querySelector("#BtnPesquisaMobile").style.display = "none";
+            document.querySelector("#BtnStartMobile").style.display = "none";
+            document.querySelector("#BtnMakerMobile").style.display = "initial";
+        }
 
-//     window.addEventListener("resize", () => {
-//         largura = window.innerWidth 
-//         if (largura > 550){
-//             document.querySelector("#addSaida").style.visibility = "visible";
-//             document.querySelector(".fieldEst").style.visibility = "visible";
-//             document.querySelector(".cpf").style.visibility = "visible";
-//             document.querySelector(".res").style.visibility = "visible";
-//         } else {
-//             document.querySelector("#addSaida").style.visibility = "hidden";
-//             document.querySelector(".fieldEst").style.visibility = "hidden";
-//             document.querySelector(".cpf").style.visibility = "hidden";
-//             document.querySelector("#small-img").style.visibility = "visible";
-//             document.querySelector(".res").style.visibility = "visible";
-//             document.querySelector("#BtnStartMobile").style.display = "initial";
-//             document.querySelector("#BtnMakerMobile").style.display = "none";
-//             document.querySelector("#BtnPesquisaMobile").style.display = "none";
-//         }
-//         })
-//     }
-//     sizeScream()
-
+      });
+      

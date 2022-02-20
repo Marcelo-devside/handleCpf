@@ -267,9 +267,6 @@ label {
     }
 }
 @media screen and (max-width: 870px) {
-    /* .popup-wrapper {
-        background: rgba(0, 0, 0, 0.8);
-    } */
     h1 {
         font-size: 2em;
     }
@@ -295,7 +292,6 @@ label {
     #image2 {
         position: relative;
         height: 21.5em;
-        /* width: 28em; */
         width: 33.2em;
     }
     .res {
@@ -330,7 +326,6 @@ label {
     }
     #BtnStartMobile {
         display: initial;
-        /* visibility: "visible"; */
     }
     h1 {
         font-size: 6vw;
@@ -501,16 +496,23 @@ label {
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1030px) and (orientation: landscape) {
+    
 }
 @media screen and (min-width: 737px) and (max-width: 1023px) and (orientation: landscape) {
+    
 }
 @media screen and (width: 812px) and (height: 375px) and (orientation: landscape) {
+    
 }
 @media screen and (width: 823px) and (orientation: landscape) {
+    
 }
 @media screen and (min-width: 568px) and (max-width: 736px) and (orientation: landscape) {
+    
 }
 @media screen and (width: 720px) and (orientation: landscape) {
+    
 }
 @media screen and (width: 653px) and (height: 280px) and (orientation: landscape) {
+    
 } 
