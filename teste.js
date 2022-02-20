@@ -204,31 +204,25 @@ function sizeScream() {
 
     window.addEventListener("resize", () => {
         largura = window.innerWidth 
-        if (largura > 550){
+         const btn = document.querySelector("#BtnMakerMobile").style.display ;
+        if (largura > 550) {
             document.querySelector("#addSaida").style.visibility = "visible";
             document.querySelector(".fieldEst").style.visibility = "visible";
             document.querySelector(".cpf").style.visibility = "visible";
             document.querySelector(".res").style.visibility = "visible";
-        }
+        } else if ( btn === "initial") {
+            document.querySelector(".res").style.visibility = "hidden";
+        }   else if (btn === "none") {
+            const estado = document.querySelector(".fieldEst");
+            estado.removeAttribute('style')
+             const cpf = document.querySelector(".cpf");
+             cpf.removeAttribute('style')
+             document.querySelector("#BtnPesquisaMobile").style.display = "initial"
+                      
+                     }         
+       
         })
     }
     sizeScream()
-    window.addEventListener("orientationchange", function(event) {
-        let angulo = event.target.screen.orientation.angle
-        if (angulo === 0){
-            this.document.location.reload(true)
-        }
-
-      });
-    
         
-    //      else {
-    //     document.querySelector("#addSaida").style.visibility = "hidden";
-    //     document.querySelector(".fieldEst").style.visibility = "hidden";
-    //     document.querySelector(".cpf").style.visibility = "hidden";
-    //     document.querySelector("#small-img").style.visibility = "visible";
-    //     document.querySelector(".res").style.visibility = "visible";
-    //     document.querySelector("#BtnStartMobile").style.display = "initial";
-    //     document.querySelector("#BtnMakerMobile").style.display = "none";
-    //     document.querySelector("#BtnPesquisaMobile").style.display = "none";
-    // }
+      
