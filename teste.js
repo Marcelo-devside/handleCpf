@@ -216,13 +216,7 @@ function sizeScream() {
     window.addEventListener("orientationchange", function(event) {
         let angulo = event.target.screen.orientation.angle
         if (angulo === 0){
-            document.querySelector(".fieldEst").style.visibility = "visible";
-            document.querySelector(".cpf").style.visibility = "visible";
-            document.querySelector("#small-img").style.visibility = "hidden";
-            document.querySelector(".res").style.visibility = "hidden";
-            document.querySelector("#BtnPesquisaMobile").style.display = "none";
-            document.querySelector("#BtnStartMobile").style.display = "none";
-            document.querySelector("#BtnMakerMobile").style.display = "initial";
+            this.document.location.reload(true)
         }
 
       });
