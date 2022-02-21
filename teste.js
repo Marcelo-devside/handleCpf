@@ -14,6 +14,7 @@ function Init() {
     document.querySelector('.marcar').hidden = true
     document.querySelector("#BtnPesquisaMobile").style.display = "none"
     document.querySelector("#BtnMakerMobile").style.display = "none"
+    document.querySelector("#BtnStartMobile").style.display = "initial"
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
     areaInputMask(inicialResult);
@@ -147,6 +148,7 @@ function validationOfSize2() {
     }
 }
 function clickAddNamber2() {
+    validationOfSize2();
     btnSearh2("none", "initial", "none");
     document.querySelector("#small-img").style.visibility = "visible";
     document.querySelector("#BtnStartMobile").style.visibility = "visible";
@@ -154,7 +156,6 @@ function clickAddNamber2() {
     disableImage.style.visibility = "visible";
     dataInput1.style.visibility = "hidden";
     dataInput2.style.visibility = "hidden";
-    validationOfSize2();
     const typingNamber = document.querySelector(".oito_Numeros").value;
     const typingEstate = document.querySelector(".cEst").value;
     const showScream = document.querySelector(".res");
@@ -205,6 +206,7 @@ function sizeScream() {
     window.addEventListener("resize", () => {
         largura = window.innerWidth 
          const btn = document.querySelector("#BtnMakerMobile").style.display ;
+         const btnBegin = document.querySelector("#BtnStartMobile").style.display ;
         if (largura > 550) {
             document.querySelector("#addSaida").style.visibility = "visible";
             document.querySelector(".fieldEst").style.visibility = "visible";
@@ -212,14 +214,20 @@ function sizeScream() {
             document.querySelector(".res").style.visibility = "visible";
         } else if ( btn === "initial") {
             document.querySelector(".res").style.visibility = "hidden";
+            document.querySelector("#addSaida").style.visibility = "hidden";
         }   else if (btn === "none") {
             const estado = document.querySelector(".fieldEst");
             estado.removeAttribute('style')
              const cpf = document.querySelector(".cpf");
              cpf.removeAttribute('style')
-             document.querySelector("#BtnPesquisaMobile").style.display = "initial"
-                      
-                     }         
+             
+            }  else if (largura < 550 && btnBegin === "none"){
+            document.querySelector("#BtnPesquisaMobile").style.display = "initial"
+            
+        } else if  (largura < 550 && btnBegin === "initial") {
+            document.querySelector("#BtnPesquisaMobile").style.display = "none"
+
+        }    
        
         })
     }
