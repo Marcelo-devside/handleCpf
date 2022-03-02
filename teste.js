@@ -1,51 +1,58 @@
-const paragrafo = document.querySelector("#paragrafo")
-const popupWrapper = document.querySelector(".popup-wrapper")
-const numberExit = document.querySelector(".res")
+const paragrafo = document.querySelector("#paragrafo");
+const popupWrapper = document.querySelector(".popup-wrapper");
+const numberExit = document.querySelector(".res");
 const initalValue = "00000000000";
- const inicialResult= initalValue.replace(
+const inicialResult = initalValue.replace(
     /^(\d{3})+(\d{3})+(\d{3})/,
     "$1.$2.$3-"
 );
 const areaInputMask = (inicialResult) => {
     const araseResult = document.querySelector(".res");
-   return araseResult.innerText = inicialResult;
+    return (araseResult.innerText = inicialResult);
 };
 function Init() {
-    document.querySelector('.marcar').hidden = true
-    document.querySelector("#BtnPesquisaMobile").style.display = "none"
-    document.querySelector("#BtnMakerMobile").style.display = "none"
-    document.querySelector("#BtnStartMobile").style.display = "initial"
+    document.querySelector(".marcar").hidden = true;
+    document.querySelector("#BtnPesquisaMobile").style.display = "none";
+    document.querySelector("#BtnMakerMobile").style.display = "none";
+    document.querySelector("#BtnStartMobile").style.display = "initial";
     const entr = document.querySelector("#oito_Numeros2");
     entr.addEventListener("keypress", checkInput, false);
     areaInputMask(inicialResult);
 }
 window.addEventListener("load", Init);
 
-popupWrapper.addEventListener('click', (event)=>{
-    const spot = event.target.classList.value
-    if (spot === "popup-close"){
-        popupWrapper.style.display = 'none'
+popupWrapper.addEventListener("click", (event) => {
+    const spot = event.target.classList.value;
+    if (spot === "popup-close") {
+        popupWrapper.style.display = "none";
         document.querySelector("#oito_Numeros2").focus();
     }
-})
-const fundo = document.querySelector('body')
-const radioButton= document.querySelector(".marcar")
-fundo.addEventListener('click', ()=>{ 
-     radioButton.setAttribute("checked", "checked")
-    })
+});
+const fundo = document.querySelector("body");
+const radioButton = document.querySelector(".marcar");
+fundo.addEventListener("click", () => {
+    radioButton.setAttribute("checked", "checked");
+});
+const getfortest = document.querySelector(".oito_Numeros");
+getfortest.addEventListener("keypress", function (e) {
+    if (!checkInput(e)) {
+        e.preventDefault();
+        const char = String.fromCharCode(e.keyCode);
+        paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`;
+        popupWrapper.style.display = "block";
+    }
+});
 function checkInput(e) {
     const char = String.fromCharCode(e.keyCode);
-    const pattern = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    if (char in pattern) {
+    const pattern = "[0-9]";
+    if (char.match(pattern)) {
         return true;
     }
-    e.preventDefault();
-    window.addEventListener("keypress", (e) => {
-        radioButton.setAttribute("checked", "checked")
-})
-    paragrafo.textContent = `Você digitou: " ${char.toLocaleUpperCase()} "  Digite somente números!`
-    popupWrapper.style.display = 'block'
 }
+window.addEventListener("keypress", (e) => {
+    radioButton.setAttribute("checked", "checked");
+});
+
 function btnSearh(option1, option2) {
     const btnSearhSelect = document.querySelector("#BtnPesquisa");
     const btnSearhGerador = document.querySelector("#maker");
@@ -56,9 +63,9 @@ function validationOfSize() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
         btnSearh("initial", "none");
-        popupWrapper.style.display = 'block'
-        paragrafo.textContent ="Você não digitou os oito números!";
-        return numberExit.preventDefault()
+        popupWrapper.style.display = "block";
+        paragrafo.textContent = "Você não digitou os oito números!";
+        return numberExit.preventDefault();
     }
 }
 function clickAddNamber() {
@@ -95,14 +102,13 @@ function clickAddNamber() {
         );
     };
     return resultExitMask();
-} 
-
+}
 
 function areaInput() {
     btnSearh("initial", "none");
     const araseInput = document.querySelector("#oito_Numeros2");
     const defaultEst = document.querySelector(".cEst");
-    araseInput.value= null;
+    araseInput.value = null;
     defaultEst.value = "7";
     Init();
 }
@@ -123,8 +129,8 @@ const dataInput1 = document.querySelector(".fieldEst");
 const dataInput2 = document.querySelector(".cpf");
 const inputOfNumberMobile = document.querySelector("#oito_Numeros2");
 const test = document.querySelector(".res").value;
-BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
-    btnSearh2("initial", "none", "none")
+BtnStartMobile.addEventListener("click", function inputOfNumerMobile() {
+    btnSearh2("initial", "none", "none");
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
     dataInput2.style.visibility = "visible";
@@ -132,19 +138,19 @@ BtnStartMobile.addEventListener('click', function inputOfNumerMobile() {
     document.querySelector("#small-img").style.visibility = "hidden";
     document.querySelector(".res").style.visibility = "hidden";
     areaInputMask(inicialResult);
-})
+});
 function validationOfSize2() {
     const typingNamber = document.querySelector(".oito_Numeros").value;
     if (typingNamber.length != 8) {
-        popupWrapper.style.display = 'block'
-        paragrafo.textContent ="Você não digitou os oito números!";
+        popupWrapper.style.display = "block";
+        paragrafo.textContent = "Você não digitou os oito números!";
         btnSearh2("initial", "none", "none");
         disableImage.style.visibility = "hidden";
         dataInput1.style.visibility = "visible";
         dataInput2.style.visibility = "visible";
         document.querySelector("#small-img").style.visibility = "hidden";
-            document.querySelector(".res").style.visibility = "hidden";
-        return numberExit.preventDefault()
+        document.querySelector(".res").style.visibility = "hidden";
+        return numberExit.preventDefault();
     }
 }
 function clickAddNamber2() {
@@ -194,7 +200,7 @@ function areaInput2() {
     const defaultEst = document.querySelector(".cEst");
     document.querySelector("#small-img").style.visibility = "hidden";
     document.querySelector(".res").style.visibility = "hidden";
-    araseInput.value= null;
+    araseInput.value = null;
     defaultEst.value = "7";
     disableImage.style.visibility = "hidden";
     dataInput1.style.visibility = "visible";
@@ -202,35 +208,30 @@ function areaInput2() {
     areaInputMask(inicialResult);
 }
 function sizeScream() {
-
     window.addEventListener("resize", () => {
-        largura = window.innerWidth 
-         const btn = document.querySelector("#BtnMakerMobile").style.display ;
-         const btnBegin = document.querySelector("#BtnStartMobile").style.display ;
+        largura = window.innerWidth;
+        const btn = document.querySelector("#BtnMakerMobile").style.display;
+        const btnBegin =
+            document.querySelector("#BtnStartMobile").style.display;
         if (largura > 550) {
             document.querySelector("#addSaida").style.visibility = "visible";
             document.querySelector(".fieldEst").style.visibility = "visible";
             document.querySelector(".cpf").style.visibility = "visible";
             document.querySelector(".res").style.visibility = "visible";
-        } else if ( btn === "initial") {
+        } else if (btn === "initial") {
             document.querySelector(".res").style.visibility = "hidden";
             document.querySelector("#addSaida").style.visibility = "hidden";
-        }   else if (btn === "none") {
+        } else if (btn === "none") {
             const estado = document.querySelector(".fieldEst");
-            estado.removeAttribute('style')
-             const cpf = document.querySelector(".cpf");
-             cpf.removeAttribute('style')
-             
-            }  else if (largura < 550 && btnBegin === "none"){
-            document.querySelector("#BtnPesquisaMobile").style.display = "initial"
-            
-        } else if  (largura < 550 && btnBegin === "initial") {
-            document.querySelector("#BtnPesquisaMobile").style.display = "none"
-
-        }    
-       
-        })
-    }
-    sizeScream()
-        
-      
+            estado.removeAttribute("style");
+            const cpf = document.querySelector(".cpf");
+            cpf.removeAttribute("style");
+        } else if (largura < 550 && btnBegin === "none") {
+            document.querySelector("#BtnPesquisaMobile").style.display =
+                "initial";
+        } else if (largura < 550 && btnBegin === "initial") {
+            document.querySelector("#BtnPesquisaMobile").style.display = "none";
+        }
+    });
+}
+sizeScream();
