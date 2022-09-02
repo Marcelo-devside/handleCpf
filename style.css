@@ -356,9 +356,9 @@ label {
         height: 60vw;
         }
     .res {
-        margin-top: 31vw;
+        margin-top: 32vw;
         /* font-size: 32px; */
-        font-size: 5.5vw;
+        font-size: 6vw;
     }
     #image2 {
         display: none;
@@ -438,7 +438,7 @@ label {
 @media screen and (max-width: 519px) {
     .res {
         font-size: 5.5vw;
-        margin-left: 3vw;
+        margin-left: 3.7vw;
     }
     
 }
