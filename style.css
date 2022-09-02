@@ -13,7 +13,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #00032f;
+    background-color: #02155d;
     align-items: center;
     overflow: hidden;
     height: 100%;
@@ -28,6 +28,15 @@ body {
 .marcar {
     position: absolute;
 }
+#box-image2{
+    position: absolute;
+    /* width: 86%;
+    height: 81%; */
+    height: 21.5em;
+    width: 31.2em;
+    margin-top: 80px;
+    background-color: rgba(255, 0, 0, 0);
+}
 #image2 {
     margin-top: 80px;
 }
@@ -35,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
-    background-color: #e5058c;
+    background-color: #051348;
     width: 100%;
 }
 h1 {
@@ -50,10 +59,9 @@ h1 {
 }
 .res {
     position: absolute;
-    font-size: 37px;
-    margin-top: 260px;
-    margin-left: -235px;
-    margin-bottom: 0;
+    font-size: 30px;
+    margin-left: 19px;
+    margin-top: 180px;
     font-weight: 900;
     color: rgba(255, 255, 255, 0.534);
     letter-spacing: 2.5px;
@@ -294,11 +302,13 @@ label {
         height: 21.5em;
         width: 33.2em;
     }
+    #box-image2{
+    width: 33.2em;
+    height: 21.5em;
+    }
     .res {
         visibility: absolute;
-        font-size: 40px;
-        margin-top: 260px;
-        margin-left: -251px;
+        font-size: 33px;
     }
     .popup {
         width: 70vw;
@@ -329,7 +339,7 @@ label {
     }
     h1 {
         font-size: 6vw;
-        letter-spacing:0.2px;
+        letter-spacing:2.2px;
     }
     .cpf {
         margin-top: 1vh;
@@ -341,10 +351,14 @@ label {
     hr {
         display: none;
     }
+    #box-image2{
+        width: 95vw;
+        height: 60vw;
+        }
     .res {
-        font-size: 7vw;
-        margin-top: 6.5em;
-        margin-left: 22px;
+        margin-top: 31vw;
+        /* font-size: 32px; */
+        font-size: 5.5vw;
     }
     #image2 {
         display: none;
@@ -423,11 +437,12 @@ label {
 }
 @media screen and (max-width: 519px) {
     .res {
-        font-size: 6.7vw;
-        margin-top: 7em;
+        font-size: 5.5vw;
+        margin-left: 3vw;
     }
+    
 }
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
     .res {
         margin-top: 7.2em;
     }
@@ -494,8 +509,8 @@ label {
     .estado{
         margin-top: -8vw;
     }
-}
-@media screen and (min-width: 1024px) and (max-width: 1030px) and (orientation: landscape) {
+} */
+/* @media screen and (min-width: 1024px) and (max-width: 1030px) and (orientation: landscape) {
     
 }
 @media screen and (min-width: 737px) and (max-width: 1023px) and (orientation: landscape) {
@@ -515,4 +530,4 @@ label {
 }
 @media screen and (width: 653px) and (height: 280px) and (orientation: landscape) {
     
-} 
+}  */
